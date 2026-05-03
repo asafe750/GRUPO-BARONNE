@@ -13,12 +13,12 @@ export function AnimatedHeadline({ text, className = "" }: AnimatedHeadlineProps
 
   return (
     <h1
-      className={className}
+      className={`${className} flex flex-wrap gap-x-[0.24em] gap-y-[0.04em]`}
       style={{ overflowWrap: "normal", wordBreak: "normal", hyphens: "none" }}
       aria-label={text}
     >
       {words.map((word, wordIndex) => (
-        <span aria-hidden="true" className="inline-block whitespace-nowrap" key={`${word}-${wordIndex}`}>
+        <span aria-hidden="true" className="inline-flex whitespace-nowrap" key={`${word}-${wordIndex}`}>
           {Array.from(word).map((letter) => {
             const index = letterIndex++;
 
@@ -39,7 +39,6 @@ export function AnimatedHeadline({ text, className = "" }: AnimatedHeadlineProps
               </motion.span>
             );
           })}
-          {wordIndex < words.length - 1 ? " " : null}
         </span>
       ))}
     </h1>
