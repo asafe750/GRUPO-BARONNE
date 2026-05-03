@@ -40,7 +40,7 @@ export function HomeHero() {
           </motion.p>
           <AnimatedHeadline
             text="Paletes PBR de qualidade, transporte que não falha. Do estoque ao destino, o Grupo Baronne move."
-            className="mt-4 max-w-5xl text-5xl font-black leading-[0.94] tracking-normal text-white [hyphens:none] [word-break:keep-all] sm:text-6xl lg:text-7xl xl:text-8xl"
+            className="mt-4 max-w-5xl text-[2rem] font-black leading-[1.06] tracking-normal text-white [hyphens:none] [overflow-wrap:normal] [word-break:normal] sm:text-[2.75rem] lg:text-[3.5rem]"
           />
           <motion.p
             className="mt-7 max-w-2xl text-base font-semibold leading-8 text-white/70 sm:text-lg"
