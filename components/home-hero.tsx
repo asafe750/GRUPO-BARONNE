@@ -39,8 +39,8 @@ export function HomeHero() {
             Grupo Baronne
           </motion.p>
           <AnimatedHeadline
-            text="Transporte e Paletes com quem você pode confiar"
-            className="mt-4 max-w-5xl text-5xl font-black leading-[0.94] tracking-normal text-white sm:text-6xl lg:text-7xl xl:text-8xl"
+            text="Paletes PBR de qualidade, transporte que não falha. Do estoque ao destino, o Grupo Baronne move."
+            className="mt-4 max-w-5xl text-5xl font-black leading-[0.94] tracking-normal text-white [hyphens:none] [word-break:keep-all] sm:text-6xl lg:text-7xl xl:text-8xl"
           />
           <motion.p
             className="mt-7 max-w-2xl text-base font-semibold leading-8 text-white/70 sm:text-lg"
@@ -48,7 +48,7 @@ export function HomeHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.25, duration: 0.7 }}
           >
-            Logística, armazenagem e soluções completas em paletes para empresas que exigem agilidade, padrão e compromisso.
+            Logística, armazenagem e soluções completas em paletes e transportes para empresas que exigem agilidade, padrão e compromisso.
           </motion.p>
           <motion.a
             href={whatsappUrl}
