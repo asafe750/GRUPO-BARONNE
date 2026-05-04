@@ -90,13 +90,3 @@ textarea {
 .hero-clip {
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 }
-
-.cursor-dot {
-  mix-blend-mode: difference;
-}
-
-@media (hover: none), (pointer: coarse) {
-  .custom-cursor {
-    display: none;
-  }
-}
