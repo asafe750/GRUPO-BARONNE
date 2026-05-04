@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
-import { CustomCursor } from "@/components/custom-cursor";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
@@ -75,7 +74,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-        <CustomCursor />
         <Navbar />
         <main>{children}</main>
         <Footer />
