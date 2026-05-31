@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --forest: #0d1f0e;
-  --lime: #6abf3a;
-  --black: #0a0a0a;
-  --white: #ffffff;
+  --brand-green: #22c55e;
+  --brand-accent: #4ade00;
+  --brand-black: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
 }
 
 * {
@@ -15,23 +16,23 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--black);
+  background: var(--brand-black);
 }
 
 body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 12% 12%, rgba(106, 191, 58, 0.12), transparent 28rem),
-    linear-gradient(135deg, #071007 0%, var(--black) 48%, #102113 100%);
-  color: var(--white);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "Segoe UI", sans-serif;
+    radial-gradient(circle at 15% 8%, rgba(34, 197, 94, 0.14), transparent 24rem),
+    radial-gradient(circle at 88% 18%, rgba(74, 222, 0, 0.08), transparent 22rem),
+    linear-gradient(180deg, #0a0a0a 0%, #070707 45%, #0a0a0a 100%);
+  color: var(--text-primary);
   letter-spacing: 0;
 }
 
-body::selection {
-  background: rgba(106, 191, 58, 0.45);
-  color: var(--white);
+::selection {
+  background: rgba(34, 197, 94, 0.45);
+  color: white;
 }
 
 a {
@@ -45,48 +46,57 @@ textarea {
   font: inherit;
 }
 
-.noise-layer {
+section {
+  scroll-margin-top: 96px;
+}
+
+.industrial-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(to bottom, black, transparent 78%);
+    linear-gradient(rgba(34, 197, 94, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.08) 1px, transparent 1px);
+  background-position: center;
+  background-size: 52px 52px;
 }
 
-.glass-surface {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(7, 16, 7, 0.58);
-  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.26);
-  backdrop-filter: blur(22px);
+.glass-nav {
+  background: rgba(10, 10, 10, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(18px);
 }
 
-.perspective-card {
-  perspective: 1100px;
+.card-hover {
+  transform: translateZ(0);
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    background 260ms ease;
 }
 
-.card-3d {
-  transform-style: preserve-3d;
-  transition: transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 420ms ease, background 420ms ease;
+.card-hover:hover {
+  border-color: rgba(34, 197, 94, 0.76);
+  box-shadow: 0 24px 70px rgba(34, 197, 94, 0.14);
+  transform: translateY(-6px);
 }
 
-.perspective-card:hover .card-3d {
-  border-color: rgba(106, 191, 58, 0.5);
-  background: linear-gradient(145deg, rgba(13, 31, 14, 0.94), rgba(10, 10, 10, 0.9));
-  transform: rotateX(8deg) rotateY(-9deg) translateY(-8px);
+.placeholder-dash {
+  border: 1px dashed rgba(34, 197, 94, 0.5);
+  background: rgba(34, 197, 94, 0.06);
+  color: rgba(209, 250, 229, 0.78);
 }
 
-.lime-focus {
-  box-shadow: 0 0 0 4px rgba(106, 191, 58, 0.18), 0 0 42px rgba(106, 191, 58, 0.22);
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-.image-fallback {
-  background:
-    linear-gradient(120deg, rgba(13, 31, 14, 0.62), rgba(10, 10, 10, 0.78)),
-    repeating-linear-gradient(90deg, rgba(106, 191, 58, 0.1) 0 1px, transparent 1px 28px),
-    radial-gradient(circle at 70% 20%, rgba(106, 191, 58, 0.25), transparent 28rem),
-    #0a0a0a;
-}
-
-.hero-clip {
-  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
 }

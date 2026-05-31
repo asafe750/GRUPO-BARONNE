@@ -1,57 +1,64 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { Barlow_Condensed, Inter } from "next/font/google";
+import { COMPANY, HERO_IMAGE, SITE_URL } from "@/lib/constants";
 import "./globals.css";
-import { FloatingWhatsApp } from "@/components/floating-whatsapp";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["600", "700", "800", "900"],
+  variable: "--font-barlow-condensed",
+  display: "swap"
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://grupo-baronne.vercel.app"),
-  title: {
-    default: "Grupo Baronne Transporte e Paletes",
-    template: "%s | Grupo Baronne"
-  },
+  metadataBase: new URL(SITE_URL),
+  title: "Grupo Baronne | Transporte de Cargas e Paletes PBR na Bahia",
   description:
-    "Transporte, armazenagem, cross dock, fabricação, compra, venda e reforma de paletes com atendimento profissional.",
+    "O Grupo Baronne oferece transporte de cargas e paletes PBR certificados na Bahia. 5 anos de experiência, qualidade e pontualidade. Fale conosco agora.",
   keywords: [
     "Grupo Baronne",
-    "transporte de cargas",
-    "paletes",
-    "paletes PBR",
-    "armazenagem",
-    "cross dock",
-    "fábrica de paletes",
-    "reforma de paletes"
+    "transporte de cargas na Bahia",
+    "paletes PBR certificados",
+    "paletes PBR Bahia",
+    "logística Bahia",
+    "transporte Bahia"
   ],
-  authors: [{ name: "Grupo Baronne Transporte e Paletes" }],
-  creator: "Grupo Baronne Transporte e Paletes",
-  publisher: "Grupo Baronne Transporte e Paletes",
+  authors: [{ name: COMPANY.name }],
+  creator: COMPANY.name,
+  publisher: COMPANY.name,
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://grupo-baronne.vercel.app",
+    url: SITE_URL,
     siteName: "Grupo Baronne",
-    title: "Grupo Baronne Transporte e Paletes",
+    title: "Grupo Baronne | Transporte de Cargas e Paletes PBR na Bahia",
     description:
-      "Soluções completas em transporte, logística e paletes para empresas que precisam de confiança operacional.",
+      "O Grupo Baronne oferece transporte de cargas e paletes PBR certificados na Bahia. 5 anos de experiência, qualidade e pontualidade.",
     images: [
       {
-        url: "/images/caminhao-paletes.jpg",
+        url: HERO_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Operação logística do Grupo Baronne"
+        alt: "Transporte de cargas do Grupo Baronne na Bahia"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grupo Baronne Transporte e Paletes",
+    title: "Grupo Baronne | Transporte de Cargas e Paletes PBR na Bahia",
     description:
-      "Transporte e paletes com padrão profissional, agilidade e compromisso.",
-    images: ["/images/caminhao-paletes.jpg"]
+      "Transporte de cargas e paletes PBR certificados na Bahia com qualidade e pontualidade.",
+    images: [HERO_IMAGE]
   },
   alternates: {
-    canonical: "/"
+    canonical: SITE_URL
   },
   robots: {
     index: true,
@@ -63,7 +70,46 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#0d1f0e"
+  themeColor: "#0a0a0a"
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}#localbusiness`,
+      name: COMPANY.name,
+      url: SITE_URL,
+      telephone: COMPANY.phoneSchema,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: COMPANY.address,
+        addressRegion: "BA",
+        addressCountry: "BR"
+      },
+      areaServed: {
+        "@type": "AdministrativeArea",
+        name: "Bahia"
+      },
+      sameAs: [COMPANY.instagramUrl]
+    },
+    {
+      "@type": "TransportCompany",
+      "@id": `${SITE_URL}#transportcompany`,
+      name: COMPANY.name,
+      url: SITE_URL,
+      telephone: COMPANY.phoneSchema,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: COMPANY.address,
+        addressRegion: "BA",
+        addressCountry: "BR"
+      },
+      sameAs: [COMPANY.instagramUrl],
+      serviceType: ["Transporte de cargas", "Venda de paletes PBR certificados"]
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -72,12 +118,13 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
+    <html lang="pt-BR" className={`${barlowCondensed.variable} ${inter.variable}`}>
+      <body className="font-body">
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
