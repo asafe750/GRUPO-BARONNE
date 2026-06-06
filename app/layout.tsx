@@ -19,16 +19,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Grupo Baronne | Transporte de Cargas e Paletes PBR na Bahia",
+  title: "Grupo Baronne | Transportadora em Camaçari BA | Paletes PBR Certificados",
   description:
-    "O Grupo Baronne oferece transporte de cargas e paletes PBR certificados na Bahia. 5 anos de experiência, qualidade e pontualidade. Fale conosco agora.",
+    "O Grupo Baronne oferece transporte de cargas para todo o Brasil e paletes PBR certificados em Camaçari BA. 5 anos de experiência, qualidade e pontualidade.",
   keywords: [
     "Grupo Baronne",
-    "transporte de cargas na Bahia",
+    "transportadora em Camaçari BA",
+    "transporte de cargas para todo o Brasil",
     "paletes PBR certificados",
-    "paletes PBR Bahia",
-    "logística Bahia",
-    "transporte Bahia"
+    "paletes PBR Camaçari",
+    "logística nacional",
+    "transporte Brasil"
   ],
   authors: [{ name: COMPANY.name }],
   creator: COMPANY.name,
@@ -38,23 +39,23 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: SITE_URL,
     siteName: "Grupo Baronne",
-    title: "Grupo Baronne | Transporte de Cargas e Paletes PBR na Bahia",
+    title: "Grupo Baronne | Transportadora em Camaçari BA | Paletes PBR Certificados",
     description:
-      "O Grupo Baronne oferece transporte de cargas e paletes PBR certificados na Bahia. 5 anos de experiência, qualidade e pontualidade.",
+      "O Grupo Baronne oferece transporte de cargas para todo o Brasil e paletes PBR certificados em Camaçari BA. 5 anos de experiência, qualidade e pontualidade.",
     images: [
       {
         url: HERO_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Transporte de cargas do Grupo Baronne na Bahia"
+        alt: "Transporte de cargas em todo o Brasil pelo Grupo Baronne"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grupo Baronne | Transporte de Cargas e Paletes PBR na Bahia",
+    title: "Grupo Baronne | Transportadora em Camaçari BA | Paletes PBR Certificados",
     description:
-      "Transporte de cargas e paletes PBR certificados na Bahia com qualidade e pontualidade.",
+      "Transporte de cargas para todo o Brasil e paletes PBR certificados em Camaçari BA.",
     images: [HERO_IMAGE]
   },
   alternates: {
@@ -84,14 +85,13 @@ const jsonLd = {
       telephone: COMPANY.phoneSchema,
       address: {
         "@type": "PostalAddress",
-        streetAddress: COMPANY.address,
-        addressRegion: "BA",
-        addressCountry: "BR"
+        streetAddress: COMPANY.streetAddress,
+        addressLocality: COMPANY.addressLocality,
+        addressRegion: COMPANY.addressRegion,
+        postalCode: COMPANY.postalCode,
+        addressCountry: COMPANY.addressCountry
       },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Bahia"
-      },
+      areaServed: "Brasil",
       sameAs: [COMPANY.instagramUrl]
     },
     {
@@ -102,12 +102,18 @@ const jsonLd = {
       telephone: COMPANY.phoneSchema,
       address: {
         "@type": "PostalAddress",
-        streetAddress: COMPANY.address,
-        addressRegion: "BA",
-        addressCountry: "BR"
+        streetAddress: COMPANY.streetAddress,
+        addressLocality: COMPANY.addressLocality,
+        addressRegion: COMPANY.addressRegion,
+        postalCode: COMPANY.postalCode,
+        addressCountry: COMPANY.addressCountry
       },
+      areaServed: "Brasil",
       sameAs: [COMPANY.instagramUrl],
-      serviceType: ["Transporte de cargas", "Venda de paletes PBR certificados"]
+      serviceType: [
+        "Transporte de cargas em nível nacional",
+        "Venda de paletes PBR certificados em Camaçari BA"
+      ]
     }
   ]
 };

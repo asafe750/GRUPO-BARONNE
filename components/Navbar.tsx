@@ -39,7 +39,7 @@ export function Navbar() {
         >
           <a href="#inicio" onClick={closeMenu} className="group inline-flex items-center">
             <span className="font-heading text-lg font-extrabold tracking-[0.14em] text-white">
-              <span className="text-brand-green">GB</span> | {COMPANY.logoText.replace("GB | ", "")}
+              <span className="text-brand-accent">GB</span> | {COMPANY.logoText.replace("GB | ", "")}
             </span>
           </a>
 
@@ -48,7 +48,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-zinc-300 transition hover:text-brand-green"
+                className="text-sm font-semibold text-zinc-300 transition hover:text-brand-accent"
               >
                 {link.label}
               </a>
@@ -92,7 +92,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={closeMenu}
-                    className="rounded-2xl px-4 py-4 text-base font-semibold text-zinc-200 transition hover:bg-zinc-900 hover:text-brand-green"
+                    className="rounded-2xl px-4 py-4 text-base font-semibold text-zinc-200 transition hover:bg-zinc-900 hover:text-brand-accent"
                   >
                     {link.label}
                   </a>

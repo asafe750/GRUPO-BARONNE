@@ -57,12 +57,12 @@ export function WhyBaronne() {
                 placeholder ? "border-dashed border-brand-green/45" : "border-zinc-800"
               }`}
             >
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-brand-green/10 text-brand-green">
+              <span className="grid h-12 w-12 place-items-center rounded-full bg-brand-green/10 text-brand-accent">
                 <Icon aria-hidden="true" size={23} />
               </span>
               <h3
                 className={`mt-6 font-heading text-3xl font-black uppercase leading-none ${
-                  placeholder ? "italic text-brand-green" : "text-white"
+                  placeholder ? "italic text-brand-accent" : "text-white"
                 }`}
               >
                 {title}

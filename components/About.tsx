@@ -2,7 +2,9 @@
 
 import { motion, useInView } from "framer-motion";
 import { BadgeCheck, Handshake, Trophy } from "lucide-react";
+import Image from "next/image";
 import { useRef } from "react";
+import { ABOUT_IMAGE } from "@/lib/constants";
 
 const badges = [
   { icon: BadgeCheck, label: "[ CERTIFICAÇÃO A PREENCHER ]" },
@@ -25,26 +27,34 @@ export function About() {
       className="px-5 py-24 md:px-8"
     >
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.86fr] lg:items-center">
-        <div>
-          <p className="font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-green">
+        <div className="relative isolate overflow-hidden rounded-2xl border border-zinc-800 p-6 shadow-2xl md:p-8">
+          <Image
+            src={ABOUT_IMAGE}
+            alt="Operação logística do Grupo Baronne em Camaçari BA"
+            fill
+            sizes="(min-width: 1024px) 56vw, 100vw"
+            className="absolute inset-0 -z-20 object-cover"
+          />
+          <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,rgba(0,0,0,0.86),rgba(0,0,0,0.75))]" />
+          <p className="font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-accent">
             Quem Somos
           </p>
           <h2
             id="sobre-title"
             className="mt-4 max-w-3xl font-heading text-5xl font-black uppercase leading-[0.92] text-white md:text-6xl"
           >
-            5 anos movendo a Bahia com força e compromisso.
+            5 anos movendo operações com força e compromisso.
           </h2>
           <div className="mt-8 space-y-5 text-base leading-8 text-zinc-300 md:text-lg">
             <p>
-              O Grupo Baronne nasceu na Bahia para atender empresas que precisam de uma operação direta,
-              confiável e sem rodeios. Atuamos em duas frentes essenciais para a cadeia produtiva:
-              transporte de cargas e fornecimento de paletes PBR certificados.
+              Com base operacional em Camaçari BA, o Grupo Baronne atua no transporte de cargas em nível
+              nacional, atendendo empresas em diferentes regiões do Brasil com segurança, compromisso e
+              eficiência logística.
             </p>
             <p>
-              Em 5 anos de mercado, construímos uma rotina marcada por pontualidade, padrão técnico e
-              compromisso com o cliente. Cada entrega e cada palete carregam o mesmo princípio: fazer o
-              que foi combinado, com qualidade e velocidade.
+              Também fornecemos paletes PBR certificados para empresas que precisam de padrão, escala e
+              previsibilidade. Em 5 anos de mercado, construímos uma rotina marcada por pontualidade,
+              padrão técnico e compromisso com o cliente.
             </p>
             <p>
               Nossa estrutura atende empresas que valorizam previsibilidade. Da solicitação ao destino,
@@ -67,7 +77,7 @@ export function About() {
                 key={label}
                 className="placeholder-dash flex items-center gap-4 rounded-2xl p-5"
               >
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-green/10 text-brand-green">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-green/10 text-brand-accent">
                   <Icon aria-hidden="true" size={22} />
                 </span>
                 <span className="text-sm font-semibold italic tracking-wide">{label}</span>

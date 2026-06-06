@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <a href="#inicio" className="inline-flex items-center">
             <span className="font-heading text-lg font-extrabold tracking-[0.14em] text-white">
-              <span className="text-brand-green">GB</span> | {COMPANY.logoText.replace("GB | ", "")}
+              <span className="text-brand-accent">GB</span> | {COMPANY.logoText.replace("GB | ", "")}
             </span>
           </a>
           <p className="mt-5 max-w-sm text-sm leading-7 text-zinc-400">
@@ -32,7 +32,7 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-zinc-400">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="transition hover:text-brand-green">
+                <a href={link.href} className="transition hover:text-brand-accent">
                   {link.label}
                 </a>
               </li>
@@ -53,7 +53,7 @@ export function Footer() {
                 href={COMPANY.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="text-brand-green transition hover:text-brand-accent"
+                className="text-brand-accent transition hover:text-brand-accent"
               >
                 {COMPANY.instagramHandle}
               </a>
@@ -64,7 +64,7 @@ export function Footer() {
                 href={WHATSAPP.general}
                 target="_blank"
                 rel="noreferrer"
-                className="text-brand-green transition hover:text-brand-accent"
+                className="text-brand-accent transition hover:text-brand-accent"
               >
                 {COMPANY.phoneDisplay}
               </a>

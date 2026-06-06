@@ -28,7 +28,7 @@ export function CTASection() {
             >
               Pronto para mover sua carga?
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-emerald-100/75">
+            <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-200">
               Fale com o Grupo Baronne e receba um atendimento direto para transporte de cargas ou
               fornecimento de paletes PBR certificados.
             </p>
@@ -41,13 +41,15 @@ export function CTASection() {
               className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-accent"
             >
               <MessageCircle aria-hidden="true" size={20} />
-              {COMPANY.phoneDisplay} — Fale agora
+              {COMPANY.phoneDisplay}
+              <span className="hidden sm:inline">: Fale agora</span>
+              <span className="sm:hidden"> Fale agora</span>
             </a>
             <a
               href={COMPANY.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-white/20 px-7 text-sm font-extrabold text-white transition hover:border-brand-green hover:text-brand-green"
+              className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-white/20 px-7 text-sm font-extrabold text-white transition hover:border-brand-green hover:text-brand-accent"
             >
               <Instagram aria-hidden="true" size={20} />
               Instagram

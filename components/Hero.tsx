@@ -29,12 +29,12 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      aria-label="Grupo Baronne transporte de cargas e paletes PBR na Bahia"
+      aria-label="Grupo Baronne transporte de cargas em todo o Brasil e paletes PBR em Camaçari BA"
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-black px-5 py-28 md:px-8"
     >
       <Image
         src={HERO_IMAGE}
-        alt="Caminhão em rodovia à noite representando transporte de cargas na Bahia pelo Grupo Baronne"
+        alt="Caminhão em rodovia à noite representando transporte de cargas em todo o Brasil pelo Grupo Baronne"
         fill
         priority
         sizes="100vw"
@@ -51,21 +51,21 @@ export function Hero() {
       >
         <motion.p
           variants={item}
-          className="mb-5 font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-green"
+          className="mb-5 font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-accent"
         >
-          Transporte e Paletes PBR na Bahia
+          Transporte nacional e Paletes PBR
         </motion.p>
         <motion.h1
           variants={item}
           className="max-w-4xl font-heading text-[48px] font-black uppercase leading-[0.88] tracking-normal text-white sm:text-[58px] lg:text-[80px]"
         >
-          A força que move a Bahia.
+          A força que move o Brasil.
         </motion.h1>
         <motion.p
           variants={item}
           className="mt-7 max-w-2xl text-lg font-medium leading-8 text-zinc-300 md:text-xl"
         >
-          Transporte de cargas e paletes PBR certificados em todo o estado da Bahia.
+          Transporte de cargas em todo o Brasil e paletes PBR certificados com base em Camaçari BA.
         </motion.p>
         <motion.div variants={item} className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
@@ -79,7 +79,7 @@ export function Hero() {
           </a>
           <a
             href="#servicos"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/25 px-7 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:border-brand-green hover:text-brand-green"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-white/25 px-7 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:border-brand-green hover:text-brand-accent"
           >
             Conheça nossos serviços
           </a>
