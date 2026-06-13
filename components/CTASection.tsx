@@ -33,23 +33,22 @@ export function CTASection() {
               fornecimento de paletes PBR certificados.
             </p>
           </div>
-          <div className="flex flex-col gap-4 sm:flex-row lg:flex-col xl:flex-row">
+          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:flex-col lg:items-start xl:flex-row xl:items-center">
             <a
               href={WHATSAPP.general}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-accent"
+              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black shadow-[0_18px_50px_rgba(34,197,94,0.22)] transition hover:bg-brand-accent sm:w-auto sm:min-w-[20.5rem] sm:whitespace-nowrap"
             >
-              <MessageCircle aria-hidden="true" size={20} />
-              {COMPANY.phoneDisplay}
-              <span className="hidden sm:inline">: Fale agora</span>
-              <span className="sm:hidden"> Fale agora</span>
+              <MessageCircle aria-hidden="true" size={20} className="shrink-0" />
+              <span className="sm:hidden">Fale no WhatsApp</span>
+              <span className="hidden sm:inline">{COMPANY.phoneDisplay}: Fale agora</span>
             </a>
             <a
               href={COMPANY.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-white/20 px-7 text-sm font-extrabold text-white transition hover:border-brand-green hover:text-brand-accent"
+              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full border border-white/20 px-7 text-sm font-extrabold text-white transition hover:border-brand-green hover:text-brand-accent sm:w-auto"
             >
               <Instagram aria-hidden="true" size={20} />
               Instagram
