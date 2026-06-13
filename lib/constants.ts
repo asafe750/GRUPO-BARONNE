@@ -33,8 +33,8 @@ export const WHATSAPP = {
 export const NAV_LINKS = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
   { label: "Números", href: "#numeros" },
+  { label: "Serviços", href: "#servicos" },
   { label: "Contato", href: "#contato" }
 ] as const;
 

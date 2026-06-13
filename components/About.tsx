@@ -48,8 +48,8 @@ export function About() {
           <div className="mt-8 space-y-5 text-base leading-8 text-zinc-300 md:text-lg">
             <p>
               Com base operacional em Camaçari BA, o Grupo Baronne atua no transporte de cargas em nível
-              nacional, atendendo empresas em diferentes regiões do Brasil com segurança, compromisso e
-              eficiência logística.
+              nacional, atendendo empresas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul com
+              segurança, compromisso e eficiência logística.
             </p>
             <p>
               Também fornecemos paletes PBR certificados para empresas que precisam de padrão, escala e

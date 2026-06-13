@@ -21,11 +21,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Grupo Baronne | Transportadora em Camaçari BA | Paletes PBR Certificados",
   description:
-    "O Grupo Baronne oferece transporte de cargas para todo o Brasil e paletes PBR certificados em Camaçari BA. 5 anos de experiência, qualidade e pontualidade.",
+    "O Grupo Baronne oferece transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR certificados em Camaçari BA.",
   keywords: [
     "Grupo Baronne",
     "transportadora em Camaçari BA",
-    "transporte de cargas para todo o Brasil",
+    "transporte de cargas Norte",
+    "transporte de cargas Nordeste",
+    "transporte de cargas Centro-Oeste",
+    "transporte de cargas Sudeste",
+    "transporte de cargas Sul",
     "paletes PBR certificados",
     "paletes PBR Camaçari",
     "logística nacional",
@@ -41,13 +45,13 @@ export const metadata: Metadata = {
     siteName: "Grupo Baronne",
     title: "Grupo Baronne | Transportadora em Camaçari BA | Paletes PBR Certificados",
     description:
-      "O Grupo Baronne oferece transporte de cargas para todo o Brasil e paletes PBR certificados em Camaçari BA. 5 anos de experiência, qualidade e pontualidade.",
+      "Transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR certificados em Camaçari BA.",
     images: [
       {
         url: HERO_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Transporte de cargas em todo o Brasil pelo Grupo Baronne"
+        alt: "Transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul pelo Grupo Baronne"
       }
     ]
   },
@@ -55,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Grupo Baronne | Transportadora em Camaçari BA | Paletes PBR Certificados",
     description:
-      "Transporte de cargas para todo o Brasil e paletes PBR certificados em Camaçari BA.",
+      "Transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR certificados em Camaçari BA.",
     images: [HERO_IMAGE]
   },
   alternates: {
@@ -91,7 +95,7 @@ const jsonLd = {
         postalCode: COMPANY.postalCode,
         addressCountry: COMPANY.addressCountry
       },
-      areaServed: "Brasil",
+      areaServed: ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"],
       sameAs: [COMPANY.instagramUrl]
     },
     {
@@ -108,7 +112,7 @@ const jsonLd = {
         postalCode: COMPANY.postalCode,
         addressCountry: COMPANY.addressCountry
       },
-      areaServed: "Brasil",
+      areaServed: ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"],
       sameAs: [COMPANY.instagramUrl],
       serviceType: [
         "Transporte de cargas em nível nacional",

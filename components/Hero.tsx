@@ -29,12 +29,12 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      aria-label="Grupo Baronne transporte de cargas em todo o Brasil e paletes PBR em Camaçari BA"
+      aria-label="Grupo Baronne transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR em Camaçari BA"
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-black px-5 py-28 md:px-8"
     >
       <Image
         src={HERO_IMAGE}
-        alt="Caminhão em rodovia à noite representando transporte de cargas em todo o Brasil pelo Grupo Baronne"
+        alt="Caminhão em rodovia à noite representando transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul pelo Grupo Baronne"
         fill
         priority
         sizes="100vw"
@@ -65,7 +65,8 @@ export function Hero() {
           variants={item}
           className="mt-7 max-w-2xl text-lg font-medium leading-8 text-zinc-300 md:text-xl"
         >
-          Transporte de cargas em todo o Brasil e paletes PBR certificados com base em Camaçari BA.
+          Transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR
+          certificados com base em Camaçari BA.
         </motion.p>
         <motion.div variants={item} className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a

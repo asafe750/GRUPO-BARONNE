@@ -15,8 +15,8 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Services />
         <Numbers />
+        <Services />
         <WhyBaronne />
         <CoverageMap />
         <CTASection />

@@ -49,8 +49,8 @@ const cards = [
   {
     icon: TruckIcon,
     title: "Transporte de Cargas",
-    text: "Operamos rotas em todo o território nacional. Atendemos São Paulo, Rio de Janeiro, Brasília, Fortaleza, Recife, Belo Horizonte, Manaus, Curitiba e demais regiões do Brasil.",
-    tag: "[ TODO O BRASIL ]"
+    text: "Operamos rotas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul. Atendemos São Paulo, Rio de Janeiro, Brasília, Fortaleza, Recife, Belo Horizonte, Manaus, Curitiba e demais regiões do Brasil.",
+    tag: "[ NORTE, NORDESTE, CENTRO-OESTE, SUDESTE E SUL ]"
   }
 ];
 

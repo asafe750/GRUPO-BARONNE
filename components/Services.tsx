@@ -59,7 +59,7 @@ export function Services() {
         <article className="card-hover relative isolate overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 p-7 md:p-9">
           <Image
             src={TRANSPORT_IMAGE}
-            alt="Transporte de cargas em todo o Brasil pelo Grupo Baronne"
+            alt="Transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul pelo Grupo Baronne"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="absolute inset-0 -z-20 object-cover"
@@ -72,15 +72,15 @@ export function Services() {
             </h2>
             <p className="mt-6 text-base leading-8 text-zinc-300">
               Com base operacional em Camaçari BA, o Grupo Baronne atua no transporte de cargas em nível
-              nacional, atendendo empresas em diferentes regiões do Brasil com segurança, compromisso e
-              eficiência logística.
+              nacional, atendendo empresas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul com
+              segurança, compromisso e eficiência logística.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               <span className="placeholder-dash rounded-2xl px-4 py-3 text-sm font-semibold italic">
-                [ REGIÕES A PREENCHER ]
+                [ NORTE, NORDESTE, CENTRO-OESTE, SUDESTE E SUL ]
               </span>
               <span className="placeholder-dash rounded-2xl px-4 py-3 text-sm font-semibold italic">
-                [ TIPOS DE CARGA A PREENCHER ]
+                [ TIPOS DE CARGA A DEFINIR ]
               </span>
             </div>
             <a

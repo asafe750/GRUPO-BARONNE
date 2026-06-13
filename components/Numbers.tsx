@@ -15,7 +15,11 @@ const metrics: Metric[] = [
   { value: 5, suffix: " anos", label: "de mercado" },
   { value: 600, prefix: "+", label: "entregas realizadas" },
   { value: 30, prefix: "+", label: "clientes ativos" },
-  { value: null, text: "Brasil", label: "território nacional atendido" }
+  {
+    value: 5,
+    suffix: " regiões",
+    label: "Norte, Nordeste, Centro-Oeste, Sudeste e Sul"
+  }
 ];
 
 function CounterValue({
