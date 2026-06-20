@@ -1,15 +1,16 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { BadgeCheck, Handshake, Trophy } from "lucide-react";
+import { CalendarClock, Handshake, MapPin, Truck } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
 import { ABOUT_IMAGE } from "@/lib/constants";
 
-const badges = [
-  { icon: BadgeCheck, label: "[ CERTIFICAÇÃO A PREENCHER ]" },
-  { icon: Handshake, label: "[ PARCEIRO A PREENCHER ]" },
-  { icon: Trophy, label: "[ RECONHECIMENTO A PREENCHER ]" }
+const aboutStats = [
+  { icon: CalendarClock, value: "5 ANOS", label: "de mercado" },
+  { icon: Truck, value: "+600", label: "entregas realizadas" },
+  { icon: Handshake, value: "+30", label: "clientes ativos" },
+  { icon: MapPin, value: "5 REGIÕES", label: "Norte, Nordeste, Centro-Oeste, Sudeste e Sul" }
 ];
 
 export function About() {
@@ -66,21 +67,25 @@ export function About() {
 
         <div className="rounded-2xl border border-zinc-800 border-l-brand-green bg-zinc-900/80 p-6 shadow-2xl md:p-8">
           <p className="font-heading text-2xl font-black uppercase text-white">
-            Autoridade em construção
-          </p>
-          <p className="mt-3 text-sm leading-6 text-zinc-400">
-            Espaços preparados para inserir documentos, selos e parceiros após a validação comercial.
+            Baronne em Números
           </p>
           <div className="mt-7 grid gap-4">
-            {badges.map(({ icon: Icon, label }) => (
+            {aboutStats.map(({ icon: Icon, value, label }) => (
               <div
-                key={label}
-                className="placeholder-dash flex items-center gap-4 rounded-2xl p-5"
+                key={value}
+                className="flex items-center gap-4 rounded-2xl border border-zinc-800 bg-zinc-950/45 p-5"
               >
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-green/10 text-brand-accent">
                   <Icon aria-hidden="true" size={22} />
                 </span>
-                <span className="text-sm font-semibold italic tracking-wide">{label}</span>
+                <span>
+                  <span className="block font-heading text-3xl font-black uppercase leading-none text-white">
+                    {value}
+                  </span>
+                  <span className="mt-2 block text-sm font-semibold uppercase tracking-[0.14em] text-zinc-400">
+                    {label}
+                  </span>
+                </span>
               </div>
             ))}
           </div>
