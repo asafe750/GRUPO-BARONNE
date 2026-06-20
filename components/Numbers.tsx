@@ -1,7 +1,11 @@
 "use client";
 
 import { animate, motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+
+const numbersImage =
+  "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2200&q=85";
 
 type Metric = {
   value: number | null;
@@ -72,8 +76,16 @@ export function Numbers() {
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
       className="relative overflow-hidden bg-zinc-950 px-5 py-24 md:px-8"
     >
-      <div className="industrial-grid absolute inset-0 opacity-50" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-black" />
+      <Image
+        src={numbersImage}
+        alt="Caminhão de carga do Grupo Baronne em operação"
+        fill
+        sizes="100vw"
+        className="absolute inset-0 object-cover"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.75),rgba(0,0,0,0.86))]" />
+      <div className="industrial-grid absolute inset-0 opacity-35" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/80" />
       <div className="relative mx-auto max-w-7xl">
         <p className="font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-accent">
           Baronne em Números
@@ -106,6 +118,9 @@ export function Numbers() {
           ))}
         </div>
       </div>
+      <span className="placeholder-dash absolute bottom-5 left-5 rounded-full px-4 py-2 text-xs font-semibold italic tracking-wide md:left-8">
+        [ FOTO REAL A ADICIONAR ]
+      </span>
     </motion.section>
   );
 }

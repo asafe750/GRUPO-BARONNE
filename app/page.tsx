@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { Numbers } from "@/components/Numbers";
-import { Services } from "@/components/Services";
 import { WhyBaronne } from "@/components/WhyBaronne";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
         <Hero />
         <About />
         <Numbers />
-        <Services />
         <WhyBaronne />
         <CoverageMap />
         <CTASection />
