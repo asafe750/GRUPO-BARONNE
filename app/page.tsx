@@ -1,10 +1,10 @@
 import { About } from "@/components/About";
-import { CoverageMap } from "@/components/CoverageMap";
+import { PalletsSection, TransportSection } from "@/components/CoverageMap";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
+import { FretesConcluidos } from "@/components/FretesConcluidos";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
-import { WhyBaronne } from "@/components/WhyBaronne";
 
 export default function Home() {
   return (
@@ -12,9 +12,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <TransportSection />
+        <FretesConcluidos />
         <About />
-        <WhyBaronne />
-        <CoverageMap />
+        <PalletsSection />
         <CTASection />
       </main>
       <Footer />
