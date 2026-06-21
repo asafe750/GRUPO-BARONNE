@@ -1,4 +1,5 @@
 import { COMPANY, NAV_LINKS, WHATSAPP } from "@/lib/constants";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 const services = ["Transporte de Cargas", "Paletes PBR Certificados"];
 
@@ -32,7 +33,7 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-zinc-400">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="transition hover:text-brand-accent">
+                <a href={link.href} className="transition hover:text-brand-interactive">
                   {link.label}
                 </a>
               </li>
@@ -53,7 +54,7 @@ export function Footer() {
                 href={COMPANY.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="text-brand-accent transition hover:text-brand-accent"
+                className="text-brand-accent transition hover:text-brand-interactive"
               >
                 {COMPANY.instagramHandle}
               </a>
@@ -64,8 +65,9 @@ export function Footer() {
                 href={WHATSAPP.general}
                 target="_blank"
                 rel="noreferrer"
-                className="text-brand-accent transition hover:text-brand-accent"
+                className="inline-flex items-center gap-1.5 text-brand-accent transition hover:text-brand-interactive"
               >
+                <WhatsAppIcon className="h-4 w-4 shrink-0" />
                 {COMPANY.phoneDisplay}
               </a>
             </p>

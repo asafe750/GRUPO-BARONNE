@@ -27,14 +27,21 @@ export const WHATSAPP = {
   )}`,
   pallets: `https://wa.me/${COMPANY.whatsappNumber}?text=${encodeURIComponent(
     "Olá! Gostaria de pedir paletes PBR."
+  )}`,
+  quote: `https://wa.me/${COMPANY.whatsappNumber}?text=${encodeURIComponent(
+    "Olá! Gostaria de fazer uma cotação."
   )}`
 };
 
 export const NAV_LINKS = [
+  { label: "Início", href: "#inicio" },
   { label: "Transporte", href: "#transporte" },
+  { label: "Tipos de Carga", href: "#tipos-de-carga" },
+  { label: "Como Funciona", href: "#como-funciona" },
   { label: "Sobre", href: "#sobre" },
   { label: "Fretes", href: "#fretes" },
   { label: "Paletes", href: "#paletes" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" }
 ] as const;
 
@@ -53,6 +60,7 @@ export const PALLET_IMAGE =
 export const BRAND_COLORS = {
   primary: "#22c55e",
   accent: "#4ade00",
+  interactive: "#7ed321",
   background: "#0a0a0a",
   text: "#ffffff",
   muted: "#a1a1aa"

@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { SectionLabel } from "@/components/SectionLabel";
 
 const freightImages = [
   {
@@ -48,9 +49,7 @@ export function FretesConcluidos() {
       className="overflow-hidden bg-black px-5 py-24 md:px-8"
     >
       <div className="mx-auto max-w-7xl">
-        <p className="font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-accent">
-          Fretes Concluídos
-        </p>
+        <SectionLabel visible={inView}>Fretes Concluídos</SectionLabel>
         <h2
           id="fretes-title"
           className="mt-4 max-w-4xl font-heading text-5xl font-black uppercase leading-none text-white md:text-6xl"
@@ -67,7 +66,7 @@ export function FretesConcluidos() {
           {loopImages.map((image, index) => (
             <article
               key={`${image.src}-${index}`}
-              className="relative h-64 w-[78vw] max-w-[28rem] shrink-0 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:h-80 md:w-[30rem]"
+              className="interactive-card relative h-64 w-[78vw] max-w-[28rem] shrink-0 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:h-80 md:w-[30rem]"
             >
               <Image
                 src={image.src}

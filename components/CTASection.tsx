@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { Instagram, MessageCircle } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { useRef } from "react";
 import { COMPANY, WHATSAPP } from "@/lib/constants";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export function CTASection() {
   const ref = useRef<HTMLElement | null>(null);
@@ -38,17 +39,16 @@ export function CTASection() {
               href={WHATSAPP.general}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black shadow-[0_18px_50px_rgba(34,197,94,0.22)] transition hover:bg-brand-accent sm:w-auto sm:min-w-[20.5rem] sm:whitespace-nowrap"
+              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black shadow-[0_18px_50px_rgba(126,211,33,0.22)] transition hover:bg-brand-interactive sm:w-auto sm:min-w-[16rem] sm:whitespace-nowrap"
             >
-              <MessageCircle aria-hidden="true" size={20} className="shrink-0" />
-              <span className="sm:hidden">Fale no WhatsApp</span>
-              <span className="hidden sm:inline">{COMPANY.phoneDisplay}: Fale agora</span>
+              <WhatsAppIcon className="h-5 w-5 shrink-0" />
+              Faça Sua Cotação!
             </a>
             <a
               href={COMPANY.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full border border-white/20 px-7 text-sm font-extrabold text-white transition hover:border-brand-green hover:text-brand-accent sm:w-auto"
+              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full border border-white/20 px-7 text-sm font-extrabold text-white transition hover:border-brand-interactive hover:text-brand-interactive sm:w-auto"
             >
               <Instagram aria-hidden="true" size={20} />
               Instagram

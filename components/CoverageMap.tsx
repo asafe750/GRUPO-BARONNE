@@ -3,6 +3,9 @@
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { SectionLabel } from "@/components/SectionLabel";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
+import { WHATSAPP } from "@/lib/constants";
 
 const truckImage =
   "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1800&q=85";
@@ -12,7 +15,7 @@ const palletsImage =
 
 function ShieldIcon() {
   return (
-    <svg viewBox="0 0 64 64" className="h-7 w-7 text-brand-accent" aria-hidden="true">
+    <svg viewBox="0 0 64 64" className="h-7 w-7 text-brand-interactive" aria-hidden="true">
       <path
         d="M32 7 52 15v15c0 13.5-8.4 22.5-20 27-11.6-4.5-20-13.5-20-27V15l20-8Z"
         fill="none"
@@ -49,14 +52,11 @@ export function TransportSection() {
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
       className="relative isolate overflow-hidden bg-black px-5 py-24 md:px-8"
     >
-      <span id="servicos" className="absolute top-0" aria-hidden="true" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(34,197,94,0.1),transparent_24rem)]" />
 
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
-          <p className="font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-accent">
-            Transporte de Cargas
-          </p>
+          <SectionLabel visible={inView}>Transporte de Cargas</SectionLabel>
           <h2
             id="transporte-title"
             className="mt-4 max-w-3xl font-heading text-5xl font-black uppercase leading-none text-white md:text-6xl"
@@ -70,7 +70,7 @@ export function TransportSection() {
             Goiânia e demais regiões.
           </p>
 
-          <div className="mt-8 rounded-2xl border border-green-500 bg-zinc-900 p-6 shadow-[0_22px_70px_rgba(34,197,94,0.2)]">
+          <div className="interactive-card mt-8 rounded-2xl border border-green-500 bg-zinc-900 p-6 shadow-[0_22px_70px_rgba(126,211,33,0.2)]">
             <div className="flex items-start gap-4">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-green/10">
                 <ShieldIcon />
@@ -88,16 +88,17 @@ export function TransportSection() {
           </div>
 
           <a
-            href="https://wa.me/5571999990385?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20frete."
+            href={WHATSAPP.transport}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-accent"
+            className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive"
           >
+            <WhatsAppIcon className="h-5 w-5 shrink-0" />
             Solicitar frete pelo WhatsApp
           </a>
         </div>
 
-        <div className="relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem]">
+        <div className="interactive-card relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem]">
           <Image
             src={truckImage}
             alt="Caminhão em rodovia para transporte de cargas do Grupo Baronne"
@@ -132,7 +133,7 @@ export function PalletsSection() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_88%_12%,rgba(34,197,94,0.1),transparent_24rem)]" />
 
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div className="relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem]">
+        <div className="interactive-card relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem]">
           <Image
             src={palletsImage}
             alt="Estoque de paletes PBR certificados em Camaçari BA"
@@ -147,9 +148,7 @@ export function PalletsSection() {
         </div>
 
         <div>
-          <p className="font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-accent">
-            Paletes PBR Certificados
-          </p>
+          <SectionLabel visible={inView}>Paletes PBR Certificados</SectionLabel>
           <h2
             id="paletes-title"
             className="mt-4 max-w-3xl font-heading text-5xl font-black uppercase leading-none text-white md:text-6xl"
@@ -171,11 +170,12 @@ export function PalletsSection() {
             ))}
           </div>
           <a
-            href="https://wa.me/5571999990385?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20paletes%20PBR."
+            href={WHATSAPP.pallets}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-accent"
+            className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive"
           >
+            <WhatsAppIcon className="h-5 w-5 shrink-0" />
             Pedir paletes pelo WhatsApp
           </a>
         </div>

@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { COMPANY, NAV_LINKS, WHATSAPP } from "@/lib/constants";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export function Navbar() {
   const sentinelRef = useRef<HTMLDivElement | null>(null);
@@ -43,25 +44,26 @@ export function Navbar() {
             </span>
           </a>
 
-          <div className="hidden items-center gap-8 lg:flex">
+          <div className="hidden items-center gap-4 xl:flex 2xl:gap-6">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-zinc-300 transition hover:text-brand-accent"
+                className="text-sm font-semibold text-zinc-300 transition hover:text-brand-interactive"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center gap-3 xl:flex">
             <a
               href={WHATSAPP.general}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-accent focus:outline-none focus:ring-4 focus:ring-brand-green/25"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive focus:outline-none focus:ring-4 focus:ring-brand-interactive/25"
             >
+              <WhatsAppIcon className="h-5 w-5 shrink-0" />
               Fale Conosco
             </a>
           </div>
@@ -71,7 +73,7 @@ export function Navbar() {
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((value) => !value)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-800 bg-zinc-950/80 text-white lg:hidden"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-800 bg-zinc-950/80 text-white xl:hidden"
           >
             {isOpen ? <X aria-hidden="true" size={22} /> : <Menu aria-hidden="true" size={22} />}
           </button>
@@ -84,7 +86,7 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.22 }}
-              className="border-t border-zinc-800 bg-black/95 px-5 pb-6 pt-2 shadow-2xl backdrop-blur-xl lg:hidden"
+              className="border-t border-zinc-800 bg-black/95 px-5 pb-6 pt-2 shadow-2xl backdrop-blur-xl xl:hidden"
             >
               <div className="mx-auto flex max-w-7xl flex-col gap-1">
                 {NAV_LINKS.map((link) => (
@@ -92,7 +94,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={closeMenu}
-                    className="rounded-2xl px-4 py-4 text-base font-semibold text-zinc-200 transition hover:bg-zinc-900 hover:text-brand-accent"
+                    className="rounded-2xl px-4 py-4 text-base font-semibold text-zinc-200 transition hover:bg-zinc-900 hover:text-brand-interactive"
                   >
                     {link.label}
                   </a>
@@ -102,8 +104,9 @@ export function Navbar() {
                   target="_blank"
                   rel="noreferrer"
                   onClick={closeMenu}
-                  className="mt-3 inline-flex h-12 items-center justify-center rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-accent"
+                  className="mt-3 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive"
                 >
+                  <WhatsAppIcon className="h-5 w-5 shrink-0" />
                   Fale pelo WhatsApp
                 </a>
               </div>

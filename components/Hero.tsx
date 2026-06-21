@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { ArrowDown, MessageCircle } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { HERO_IMAGE, WHATSAPP } from "@/lib/constants";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -73,14 +74,14 @@ export function Hero() {
             href={WHATSAPP.general}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:-translate-y-0.5 hover:bg-brand-accent focus:outline-none focus:ring-4 focus:ring-brand-green/25"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-interactive focus:outline-none focus:ring-4 focus:ring-brand-interactive/25"
           >
-            <MessageCircle aria-hidden="true" size={19} />
+            <WhatsAppIcon className="h-5 w-5 shrink-0" />
             Fale pelo WhatsApp
           </a>
           <a
-            href="#servicos"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/25 px-7 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:border-brand-green hover:text-brand-accent"
+            href="#paletes"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-white/25 px-7 text-sm font-extrabold text-white transition hover:border-brand-interactive hover:text-brand-interactive"
           >
             Conheça nossos serviços
           </a>

@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { CalendarClock, Handshake, MapPin, Truck } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
+import { SectionLabel } from "@/components/SectionLabel";
 import { ABOUT_IMAGE } from "@/lib/constants";
 
 const aboutStats = [
@@ -28,7 +29,7 @@ export function About() {
       className="px-5 py-24 md:px-8"
     >
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.86fr] lg:items-center">
-        <div className="relative isolate overflow-hidden rounded-2xl border border-zinc-800 p-6 shadow-2xl md:p-8">
+        <div className="interactive-card relative isolate overflow-hidden rounded-2xl border border-zinc-800 p-6 shadow-2xl md:p-8">
           <Image
             src={ABOUT_IMAGE}
             alt="Operação logística do Grupo Baronne em Camaçari BA"
@@ -37,9 +38,7 @@ export function About() {
             className="absolute inset-0 -z-20 object-cover"
           />
           <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,rgba(0,0,0,0.86),rgba(0,0,0,0.75))]" />
-          <p className="font-heading text-sm font-extrabold uppercase tracking-[0.32em] text-brand-accent">
-            Quem Somos
-          </p>
+          <SectionLabel visible={inView}>Quem Somos</SectionLabel>
           <h2
             id="sobre-title"
             className="mt-4 max-w-3xl font-heading text-5xl font-black uppercase leading-[0.92] text-white md:text-6xl"
@@ -65,7 +64,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-zinc-800 border-l-brand-green bg-zinc-900/80 p-6 shadow-2xl md:p-8">
+        <div className="interactive-card rounded-2xl border border-zinc-800 border-l-brand-green bg-zinc-900/80 p-6 shadow-2xl md:p-8">
           <p className="font-heading text-2xl font-black uppercase text-white">
             Baronne em Números
           </p>
@@ -73,9 +72,9 @@ export function About() {
             {aboutStats.map(({ icon: Icon, value, label }) => (
               <div
                 key={value}
-                className="flex items-center gap-4 rounded-2xl border border-zinc-800 bg-zinc-950/45 p-5"
+                className="interactive-card flex items-center gap-4 rounded-2xl border border-zinc-800 bg-zinc-950/45 p-5"
               >
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-green/10 text-brand-accent">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-green/10 text-brand-interactive">
                   <Icon aria-hidden="true" size={22} />
                 </span>
                 <span>

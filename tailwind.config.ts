@@ -11,6 +11,7 @@ const config: Config = {
         brand: {
           green: "#22c55e",
           accent: "#4ade00",
+          interactive: "#7ed321",
           black: "#0a0a0a",
           white: "#ffffff",
           muted: "#a1a1aa"
@@ -28,7 +29,7 @@ const config: Config = {
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"]
       },
       boxShadow: {
-        glow: "0 0 40px rgba(34, 197, 94, 0.26)",
+        glow: "0 0 40px rgba(126, 211, 33, 0.28)",
         glass: "0 20px 80px rgba(0, 0, 0, 0.32)"
       },
       backgroundImage: {
