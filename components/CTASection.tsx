@@ -34,12 +34,12 @@ export function CTASection() {
               fornecimento de paletes PBR certificados.
             </p>
           </div>
-          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:flex-col lg:items-start xl:flex-row xl:items-center">
+          <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:flex-wrap lg:flex-col lg:items-start xl:flex-row xl:items-center">
             <a
               href={WHATSAPP.general}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black shadow-[0_18px_50px_rgba(126,211,33,0.22)] transition hover:bg-brand-interactive sm:w-auto sm:min-w-[16rem] sm:whitespace-nowrap"
+              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black shadow-[0_18px_50px_rgba(126,211,33,0.22)] transition hover:bg-brand-interactive sm:w-64 sm:whitespace-nowrap"
             >
               <WhatsAppIcon className="h-5 w-5 shrink-0" />
               Faça Sua Cotação!
@@ -48,7 +48,7 @@ export function CTASection() {
               href={COMPANY.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full border border-white/20 px-7 text-sm font-extrabold text-white transition hover:border-brand-interactive hover:text-brand-interactive sm:w-auto"
+              className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full border border-white/20 px-7 text-sm font-extrabold text-white transition hover:border-brand-interactive hover:text-brand-interactive sm:w-64"
             >
               <Instagram aria-hidden="true" size={20} />
               Instagram
