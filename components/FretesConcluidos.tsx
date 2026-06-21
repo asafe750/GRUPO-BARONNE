@@ -46,7 +46,7 @@ export function FretesConcluidos() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="overflow-hidden bg-black px-5 py-24 md:px-8"
+      className="section-flow section-glow-top-left overflow-hidden bg-black px-5 py-24 md:px-8"
     >
       <div className="mx-auto max-w-7xl">
         <SectionLabel visible={inView}>Fretes Concluídos</SectionLabel>

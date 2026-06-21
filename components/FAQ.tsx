@@ -59,7 +59,7 @@ export function FAQ() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="bg-black px-5 py-24 md:px-8"
+      className="section-flow section-glow-bottom-left bg-black px-5 py-24 md:px-8"
     >
       <script
         type="application/ld+json"

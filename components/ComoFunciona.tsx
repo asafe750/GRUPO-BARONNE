@@ -46,7 +46,7 @@ export function ComoFunciona() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="relative isolate overflow-hidden bg-black px-5 py-24 md:px-8"
+      className="section-flow relative isolate overflow-hidden bg-black px-5 py-24 md:px-8"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_12%,rgba(126,211,33,0.08),transparent_24rem)]" />
 

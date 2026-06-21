@@ -18,7 +18,7 @@ export function CTASection() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="px-5 py-24 md:px-8"
+      className="section-flow section-glow-top-right bg-black px-5 py-24 md:px-8"
     >
       <div className="mx-auto overflow-hidden rounded-[2rem] border border-brand-green/25 bg-gradient-to-br from-[#0d371b] via-[#0f2415] to-black p-8 shadow-glow md:p-14">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
