@@ -130,6 +130,19 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${barlowCondensed.variable} ${inter.variable}`}>
       <body className="font-body">
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "280px",
+            background:
+              "linear-gradient(to bottom, rgba(34,197,94,0.18) 0%, rgba(34,197,94,0.08) 40%, transparent 100%)",
+            pointerEvents: "none",
+            zIndex: 0
+          }}
+        />
         {children}
         <script
           type="application/ld+json"
