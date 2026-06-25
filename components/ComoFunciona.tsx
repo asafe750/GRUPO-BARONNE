@@ -65,30 +65,30 @@ export function ComoFunciona() {
 
         <div className="relative mt-14">
           <div className="absolute left-0 right-0 top-10 hidden h-px bg-zinc-800 lg:block" />
-          <div className="grid gap-5 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 md:gap-5 lg:grid-cols-4">
             {steps.map(({ number, icon: Icon, title, description, details }) => (
               <article
                 key={number}
-                className="interactive-card relative rounded-2xl border border-zinc-800 bg-zinc-900/80 p-6"
+                className="interactive-card relative rounded-2xl border border-zinc-800 bg-zinc-900/80 p-4 md:p-6"
               >
-                <div className="flex items-center gap-4">
-                  <span className="grid h-20 w-20 shrink-0 place-items-center rounded-full border border-brand-green/45 bg-black font-heading text-3xl font-black text-brand-interactive shadow-[0_0_42px_rgba(126,211,33,0.18)]">
+                <div className="flex flex-nowrap items-center gap-3 md:gap-4">
+                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full border border-brand-green/45 bg-black font-heading text-2xl font-black text-brand-interactive shadow-[0_0_42px_rgba(126,211,33,0.18)] md:h-20 md:w-20 md:text-3xl">
                     {number}
                   </span>
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-green/10 text-brand-interactive">
-                    <Icon aria-hidden="true" size={23} />
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-green/10 text-brand-interactive md:h-12 md:w-12">
+                    <Icon aria-hidden="true" className="h-5 w-5 md:h-[23px] md:w-[23px]" />
                   </span>
                 </div>
-                <h3 className="mt-6 font-heading text-3xl font-black uppercase leading-none text-white">
+                <h3 className="mt-6 overflow-visible break-normal font-heading text-lg font-black uppercase leading-none text-white md:text-3xl">
                   {title}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-zinc-400">{description}</p>
                 {details ? (
-                  <ul className="mt-3 grid gap-2 text-sm text-white">
+                  <ul className="mt-3 grid gap-2 text-xs text-white md:text-sm">
                     {details.map((detail) => (
-                      <li key={detail} className="flex items-center gap-2">
+                      <li key={detail} className="flex items-start gap-2">
                         <Check aria-hidden="true" className="h-4 w-4 shrink-0 text-brand-green" />
-                        <span>{detail}</span>
+                        <span className="break-normal">{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -102,7 +102,7 @@ export function ComoFunciona() {
           href={WHATSAPP.quote}
           target="_blank"
           rel="noreferrer"
-          className="mt-10 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-interactive"
+          className="mt-10 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-interactive md:w-auto"
         >
           <WhatsAppIcon className="h-5 w-5 shrink-0" />
           Faça Sua Cotação!
