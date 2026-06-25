@@ -20,24 +20,21 @@ const steps = [
     icon: ClipboardList,
     title: "Receba sua cotação",
     description: "Retorno rápido com valores e prazos para sua operação.",
-    details: ["Sem enrolação", "Preço competitivo", "Garantia inclusa"],
-    detailIcon: "check"
+    details: ["Sem enrolação", "Preço competitivo", "Garantia inclusa"]
   },
   {
     number: "03",
     icon: CalendarClock,
     title: "Coleta agendada",
     description: "Organizamos a coleta no melhor horário para sua empresa.",
-    details: ["Marcação de data", "Horário flexível", "De acordo com sua preferência"],
-    detailIcon: "check"
+    details: ["Marcação de data", "Horário flexível", "De acordo com sua preferência"]
   },
   {
     number: "04",
     icon: MapPinned,
     title: "Entrega com acompanhamento",
     description: "Sua carga é acompanhada do ponto de origem ao destino final.",
-    details: ["Entrega segura", "Acompanhamento do começo ao fim", "Mais controle para sua operação"],
-    detailIcon: "check"
+    details: ["Entrega segura", "Acompanhamento do começo ao fim", "Mais controle para sua operação"]
   }
 ];
 
@@ -69,7 +66,7 @@ export function ComoFunciona() {
         <div className="relative mt-14">
           <div className="absolute left-0 right-0 top-10 hidden h-px bg-zinc-800 lg:block" />
           <div className="grid gap-5 lg:grid-cols-4">
-            {steps.map(({ number, icon: Icon, title, description, details, detailIcon }) => (
+            {steps.map(({ number, icon: Icon, title, description, details }) => (
               <article
                 key={number}
                 className="interactive-card relative rounded-2xl border border-zinc-800 bg-zinc-900/80 p-6"
@@ -90,11 +87,7 @@ export function ComoFunciona() {
                   <ul className="mt-3 grid gap-2 text-sm text-white">
                     {details.map((detail) => (
                       <li key={detail} className="flex items-center gap-2">
-                        {detailIcon === "check" ? (
-                          <Check aria-hidden="true" className="h-4 w-4 shrink-0 text-brand-green" />
-                        ) : (
-                          <span className="h-2 w-2 shrink-0 rounded-full bg-brand-green" />
-                        )}
+                        <Check aria-hidden="true" className="h-4 w-4 shrink-0 text-brand-green" />
                         <span>{detail}</span>
                       </li>
                     ))}
