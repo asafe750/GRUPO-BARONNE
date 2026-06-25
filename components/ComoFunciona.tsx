@@ -12,7 +12,8 @@ const steps = [
     number: "01",
     icon: MessageSquareText,
     title: "Envie os dados da carga",
-    description: "Fale com a gente pelo WhatsApp e conte o que precisa transportar."
+    description: "Fale com a gente pelo WhatsApp e conte o que precisa transportar.",
+    details: ["Remetente", "Destinatário", "Tipo de Carga", "Peso"]
   },
   {
     number: "02",
@@ -62,7 +63,7 @@ export function ComoFunciona() {
         <div className="relative mt-14">
           <div className="absolute left-0 right-0 top-10 hidden h-px bg-zinc-800 lg:block" />
           <div className="grid gap-5 lg:grid-cols-4">
-            {steps.map(({ number, icon: Icon, title, description }) => (
+            {steps.map(({ number, icon: Icon, title, description, details }) => (
               <article
                 key={number}
                 className="interactive-card relative rounded-2xl border border-zinc-800 bg-zinc-900/80 p-6"
@@ -79,6 +80,16 @@ export function ComoFunciona() {
                   {title}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-zinc-400">{description}</p>
+                {details ? (
+                  <ul className="mt-3 grid gap-2 text-sm text-white">
+                    {details.map((detail) => (
+                      <li key={detail} className="flex items-center gap-2">
+                        <span className="h-2 w-2 shrink-0 rounded-full bg-brand-green" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </article>
             ))}
           </div>
