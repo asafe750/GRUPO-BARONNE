@@ -53,7 +53,7 @@ export function Hero() {
       >
         <motion.p
           variants={item}
-          className="mb-5 font-heading text-sm font-extrabold uppercase tracking-[0.15em] text-brand-accent"
+          className="mb-5 font-heading text-base font-extrabold uppercase tracking-[0.15em] text-brand-accent"
         >
           Transporte nacional e Paletes PBR
         </motion.p>
