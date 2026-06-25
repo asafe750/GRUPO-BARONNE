@@ -140,7 +140,7 @@ export default function RootLayout({
             background:
               "linear-gradient(to bottom, rgba(34,197,94,0.18) 0%, rgba(34,197,94,0.08) 40%, transparent 100%)",
             pointerEvents: "none",
-            zIndex: 0
+            zIndex: 40
           }}
         />
         {children}
