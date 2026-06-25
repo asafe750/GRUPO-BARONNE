@@ -43,6 +43,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-black/70 via-black/78 to-[#0a1e0a]/85" />
       <div className="industrial-grid absolute inset-0 -z-10 opacity-30 [mask-image:linear-gradient(to_bottom,black,transparent_82%)]" />
+      <div className="pointer-events-none absolute -top-56 left-1/2 -z-10 h-[32rem] w-[140vw] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_top,rgba(74,222,0,0.42),rgba(34,197,94,0.22)_38%,transparent_72%)] blur-2xl" />
 
       <motion.div
         variants={container}
