@@ -138,7 +138,7 @@ export default function RootLayout({
             width: "100%",
             height: "280px",
             background:
-              "linear-gradient(to bottom, rgba(34,197,94,0.18) 0%, rgba(34,197,94,0.08) 40%, transparent 100%)",
+              "linear-gradient(to bottom, rgba(34,197,94,0.234) 0%, rgba(34,197,94,0.104) 40%, transparent 100%)",
             pointerEvents: "none",
             zIndex: 40
           }}
