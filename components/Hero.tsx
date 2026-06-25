@@ -43,13 +43,13 @@ export function Hero() {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-black/70 via-black/78 to-[#0a1e0a]/85" />
       <div className="industrial-grid absolute inset-0 -z-10 opacity-30 [mask-image:linear-gradient(to_bottom,black,transparent_82%)]" />
-      <div className="pointer-events-none absolute -top-56 left-1/2 -z-10 h-[32rem] w-[140vw] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_top,rgba(74,222,0,0.42),rgba(34,197,94,0.22)_38%,transparent_72%)] blur-2xl" />
+      <div className="pointer-events-none absolute -top-64 left-1/2 z-0 h-[34rem] w-[155vw] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_top,rgba(74,222,0,0.34),rgba(34,197,94,0.18)_42%,transparent_74%)] blur-2xl" />
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="visible"
-        className="mx-auto w-full max-w-7xl pt-12"
+        className="relative z-10 mx-auto w-full max-w-7xl pt-12"
       >
         <motion.p
           variants={item}
@@ -95,7 +95,7 @@ export function Hero() {
         initial={{ opacity: 0, y: -6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 text-zinc-400 md:inline-flex"
+        className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 text-zinc-400 md:inline-flex"
       >
         <motion.span
           animate={{ y: [0, 8, 0] }}

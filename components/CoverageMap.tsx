@@ -53,8 +53,9 @@ export function TransportSection() {
       className="section-flow relative isolate overflow-hidden bg-black px-5 py-24 md:px-8"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(34,197,94,0.1),transparent_24rem)]" />
+      <div className="pointer-events-none absolute -top-52 left-1/2 z-0 h-[28rem] w-[150vw] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_top,rgba(74,222,0,0.18),rgba(34,197,94,0.11)_44%,transparent_76%)] blur-2xl" />
 
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
           <SectionLabel visible={inView}>Transporte de Cargas</SectionLabel>
           <h2
