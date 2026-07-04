@@ -49,12 +49,12 @@ export function TransportSection() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow relative isolate overflow-hidden bg-black px-5 py-24 md:px-8"
+      className="section-flow relative isolate overflow-hidden bg-black px-5 py-12 md:px-8 md:py-24"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(34,197,94,0.1),transparent_24rem)]" />
       <div className="pointer-events-none absolute -top-52 left-1/2 z-0 h-[28rem] w-[150vw] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_top,rgba(74,222,0,0.18),rgba(34,197,94,0.11)_44%,transparent_76%)] blur-2xl" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">
         <div>
           <SectionLabel visible={inView}>Transporte de Cargas</SectionLabel>
           <h2
@@ -125,11 +125,11 @@ export function PalletsSection() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow relative isolate overflow-hidden bg-black px-5 py-24 md:px-8"
+      className="section-flow relative isolate overflow-hidden bg-black px-5 py-12 md:px-8 md:py-24"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_88%_12%,rgba(34,197,94,0.1),transparent_24rem)]" />
 
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
         <div className="interactive-card order-2 relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem] lg:order-1">
           <Image
             src={palletsImage}

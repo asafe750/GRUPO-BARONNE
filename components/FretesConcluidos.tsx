@@ -46,7 +46,7 @@ export function FretesConcluidos() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow section-glow-top-left overflow-hidden bg-black px-5 py-24 md:px-8"
+      className="section-flow section-glow-top-left overflow-hidden bg-black px-5 py-12 md:px-8 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionLabel visible={inView}>Fretes Concluídos</SectionLabel>
@@ -61,7 +61,7 @@ export function FretesConcluidos() {
         </p>
       </div>
 
-      <div className="mt-12 [mask-image:linear-gradient(to_right,transparent,black_9%,black_91%,transparent)]">
+      <div className="mt-8 [mask-image:linear-gradient(to_right,transparent,black_9%,black_91%,transparent)] md:mt-12">
         <div className="freight-marquee flex w-max gap-5 pr-5">
           {loopImages.map((image, index) => (
             <article

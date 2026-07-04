@@ -59,7 +59,7 @@ export function FAQ() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow section-glow-bottom-left bg-black px-5 py-24 md:px-8"
+      className="section-flow section-glow-bottom-left bg-black px-5 py-12 md:px-8 md:py-24"
     >
       <script
         type="application/ld+json"
@@ -75,7 +75,7 @@ export function FAQ() {
           Tire suas dúvidas.
         </h2>
 
-        <dl className="mt-12 space-y-4">
+        <dl className="mt-8 space-y-4 md:mt-12">
           {faqs.map(({ question, answer, placeholder }, index) => {
             const isOpen = openIndex === index;
 

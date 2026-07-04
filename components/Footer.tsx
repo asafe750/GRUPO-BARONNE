@@ -6,8 +6,8 @@ const services = ["Transporte de Cargas", "Paletes PBR Certificados"];
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-900 bg-black px-5 py-14 md:px-8">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
+    <footer className="border-t border-zinc-900 bg-black px-5 py-8 md:px-8 md:py-14">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr] lg:gap-10">
         <div>
           <a href="#inicio" className="inline-flex items-center">
             <Image
@@ -79,7 +79,7 @@ export function Footer() {
           </address>
         </div>
       </div>
-      <div className="mx-auto mt-12 max-w-7xl border-t border-zinc-900 pt-6 text-sm text-zinc-500">
+      <div className="mx-auto mt-8 max-w-7xl border-t border-zinc-900 pt-6 text-sm text-zinc-500 md:mt-12">
         © 2025 Grupo Baronne. Todos os direitos reservados.
       </div>
     </footer>

@@ -50,7 +50,7 @@ export function ComoFunciona() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow relative isolate overflow-hidden bg-black px-5 py-24 md:px-8"
+      className="section-flow relative isolate overflow-hidden bg-black px-5 py-12 md:px-8 md:py-24"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_12%,rgba(126,211,33,0.08),transparent_24rem)]" />
 
@@ -63,7 +63,7 @@ export function ComoFunciona() {
           Do pedido à entrega, sem complicação.
         </h2>
 
-        <div className="relative mt-14">
+        <div className="relative mt-8 md:mt-14">
           <div className="absolute left-0 right-0 top-10 hidden h-px bg-zinc-800 lg:block" />
           <div className="grid grid-cols-1 gap-4 md:gap-5 lg:grid-cols-4">
             {steps.map(({ number, icon: Icon, title, description, details }) => (
@@ -102,7 +102,7 @@ export function ComoFunciona() {
           href={WHATSAPP.quote}
           target="_blank"
           rel="noreferrer"
-          className="mt-10 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-interactive md:w-auto"
+          className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-interactive md:mt-10 md:w-auto"
         >
           <WhatsAppIcon className="h-5 w-5 shrink-0" />
           Faça Sua Cotação!

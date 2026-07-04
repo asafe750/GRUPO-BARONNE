@@ -26,9 +26,9 @@ export function About() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow section-glow-bottom-right bg-black px-5 py-24 md:px-8"
+      className="section-flow section-glow-bottom-right bg-black px-5 py-12 md:px-8 md:py-24"
     >
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.86fr] lg:items-center">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.86fr] lg:items-center lg:gap-12">
         <div className="interactive-card relative isolate overflow-hidden rounded-2xl border border-zinc-800 p-6 shadow-2xl md:p-8">
           <Image
             src={ABOUT_IMAGE}

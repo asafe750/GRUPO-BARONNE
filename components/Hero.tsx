@@ -31,7 +31,7 @@ export function Hero() {
     <section
       id="inicio"
       aria-label="Grupo Baronne transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR em Camaçari BA"
-      className="section-flow section-glow-bottom-right relative isolate flex min-h-screen items-center overflow-hidden bg-black px-5 py-28 md:px-8"
+      className="section-flow section-glow-bottom-right relative isolate flex min-h-screen items-center overflow-hidden bg-black px-5 py-20 md:px-8 md:py-28"
     >
       <Image
         src={HERO_IMAGE}
@@ -70,7 +70,7 @@ export function Hero() {
           Transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR
           certificados com base em Camaçari BA.
         </motion.p>
-        <motion.div variants={item} className="mt-10 flex flex-col gap-4 sm:flex-row">
+        <motion.div variants={item} className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
           <a
             href={WHATSAPP.general}
             target="_blank"
