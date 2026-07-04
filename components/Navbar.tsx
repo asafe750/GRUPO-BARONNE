@@ -43,9 +43,9 @@ export function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Logo Grupo Baronne Transporte e Paletes"
-              width={180}
-              height={116}
-              className="h-14 w-auto object-contain md:h-16"
+              width={207}
+              height={133}
+              className="h-[4rem] w-auto object-contain md:h-[4.6rem]"
               priority
             />
           </a>

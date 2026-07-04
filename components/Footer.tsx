@@ -13,9 +13,9 @@ export function Footer() {
             <Image
               src="/images/logo.png"
               alt="Logo Grupo Baronne Transporte e Paletes"
-              width={220}
-              height={141}
-              className="h-20 w-auto object-contain md:h-24"
+              width={253}
+              height={162}
+              className="h-[5.75rem] w-auto object-contain md:h-[6.9rem]"
             />
           </a>
           <p className="mt-5 max-w-sm text-sm leading-7 text-zinc-400">
