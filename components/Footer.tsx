@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { COMPANY, NAV_LINKS, WHATSAPP } from "@/lib/constants";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
@@ -9,9 +10,13 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
         <div>
           <a href="#inicio" className="inline-flex items-center">
-            <span className="font-heading text-lg font-extrabold tracking-[0.14em] text-white">
-              <span className="text-brand-accent">GB</span> | {COMPANY.logoText.replace("GB | ", "")}
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Logo Grupo Baronne Transporte e Paletes"
+              width={220}
+              height={141}
+              className="h-20 w-auto object-contain md:h-24"
+            />
           </a>
           <p className="mt-5 max-w-sm text-sm leading-7 text-zinc-400">
             Transporte de cargas e paletes PBR certificados para empresas que exigem padrão,

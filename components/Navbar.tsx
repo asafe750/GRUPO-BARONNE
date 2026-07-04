@@ -2,8 +2,9 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { COMPANY, NAV_LINKS, WHATSAPP } from "@/lib/constants";
+import { NAV_LINKS, WHATSAPP } from "@/lib/constants";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export function Navbar() {
@@ -39,9 +40,14 @@ export function Navbar() {
           className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8"
         >
           <a href="#inicio" onClick={closeMenu} className="group inline-flex items-center">
-            <span className="font-heading text-lg font-extrabold tracking-[0.14em] text-white">
-              <span className="text-brand-accent">GB</span> | {COMPANY.logoText.replace("GB | ", "")}
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Logo Grupo Baronne Transporte e Paletes"
+              width={180}
+              height={116}
+              className="h-14 w-auto object-contain md:h-16"
+              priority
+            />
           </a>
 
           <div className="hidden items-center gap-4 xl:flex 2xl:gap-6">
