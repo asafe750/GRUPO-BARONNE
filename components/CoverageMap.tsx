@@ -107,9 +107,6 @@ export function TransportSection() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.68),rgba(0,0,0,0.38))]" />
-          <span className="placeholder-dash absolute bottom-5 left-5 rounded-full px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] backdrop-blur">
-            [ FOTO REAL A ADICIONAR ]
-          </span>
         </div>
       </div>
     </motion.section>
