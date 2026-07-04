@@ -52,7 +52,7 @@ export function FretesConcluidos() {
         <SectionLabel visible={inView}>Fretes Concluídos</SectionLabel>
         <h2
           id="fretes-title"
-          className="mt-4 max-w-4xl font-heading text-5xl font-black uppercase leading-none text-white md:text-6xl"
+          className="mt-4 max-w-4xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
         >
           Carga entregue. Compromisso cumprido.
         </h2>
@@ -76,9 +76,6 @@ export function FretesConcluidos() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.18),rgba(0,0,0,0.72))]" />
-              <span className="placeholder-dash absolute bottom-5 left-5 rounded-full px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] backdrop-blur">
-                [ FOTO REAL A ADICIONAR ]
-              </span>
             </article>
           ))}
         </div>

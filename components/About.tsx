@@ -41,22 +41,27 @@ export function About() {
           <SectionLabel visible={inView}>Quem Somos</SectionLabel>
           <h2
             id="sobre-title"
-            className="mt-4 max-w-3xl font-heading text-5xl font-black uppercase leading-[0.92] text-white md:text-6xl"
+            className="mt-4 max-w-3xl font-heading text-[40px] font-black uppercase leading-[0.92] text-white md:text-6xl"
           >
             5 anos movendo operações com força e compromisso.
           </h2>
-          <div className="mt-8 space-y-5 text-base leading-8 text-zinc-300 md:text-lg">
-            <p>
+          <div className="mt-6 text-base leading-8 text-zinc-300 md:mt-8 md:space-y-5 md:text-lg">
+            <p className="md:hidden">
               Com base operacional em Camaçari BA, o Grupo Baronne atua no transporte de cargas em nível
               nacional, atendendo empresas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul com
               segurança, compromisso e eficiência logística.
             </p>
-            <p>
+            <p className="hidden md:block">
+              Com base operacional em Camaçari BA, o Grupo Baronne atua no transporte de cargas em nível
+              nacional, atendendo empresas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul com
+              segurança, compromisso e eficiência logística.
+            </p>
+            <p className="hidden md:block">
               Também fornecemos paletes PBR certificados para empresas que precisam de padrão, escala e
               previsibilidade. Em 5 anos de mercado, construímos uma rotina marcada por pontualidade,
               padrão técnico e compromisso com o cliente.
             </p>
-            <p>
+            <p className="hidden md:block">
               Nossa estrutura atende empresas que valorizam previsibilidade. Da solicitação ao destino,
               a comunicação é próxima, o atendimento é direto e a execução segue o ritmo de quem não pode
               parar.

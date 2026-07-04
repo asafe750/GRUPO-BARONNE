@@ -20,12 +20,12 @@ export function CTASection() {
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
       className="section-flow section-glow-top-right bg-black px-5 py-12 md:px-8 md:py-24"
     >
-      <div className="mx-auto overflow-hidden rounded-[2rem] border border-brand-green/25 bg-gradient-to-br from-[#0d371b] via-[#0f2415] to-black p-8 shadow-glow md:p-14">
+      <div className="mx-auto overflow-hidden rounded-[2rem] border border-brand-green/25 bg-gradient-to-br from-[#0d371b] via-[#0f2415] to-black p-5 shadow-glow md:p-14">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <div>
             <h2
               id="contato-title"
-              className="font-heading text-5xl font-black uppercase leading-none text-white md:text-7xl"
+              className="font-heading text-[40px] font-black uppercase leading-none text-white md:text-7xl"
             >
               Pronto para mover sua carga?
             </h2>

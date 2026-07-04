@@ -79,7 +79,7 @@ export function Navbar() {
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((value) => !value)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-800 bg-zinc-950/80 text-white xl:hidden"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-green/35 bg-zinc-950/90 text-brand-accent shadow-[0_0_24px_rgba(126,211,33,0.16)] xl:hidden"
           >
             {isOpen ? <X aria-hidden="true" size={22} /> : <Menu aria-hidden="true" size={22} />}
           </button>

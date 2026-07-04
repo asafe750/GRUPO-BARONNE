@@ -32,7 +32,7 @@ export function TiposDeCarga() {
         <SectionLabel visible={inView}>Tipos de Carga</SectionLabel>
         <h2
           id="tipos-de-carga-title"
-          className="mt-4 max-w-4xl font-heading text-5xl font-black uppercase leading-none text-white md:text-6xl"
+          className="mt-4 max-w-4xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
         >
           Carga certa, no transporte certo.
         </h2>
@@ -44,12 +44,12 @@ export function TiposDeCarga() {
           {cargoTypes.map(({ icon: Icon, title }, index) => (
             <article
               key={`${title}-${index}`}
-              className="interactive-card rounded-2xl border border-dashed border-brand-green/45 bg-zinc-900/80 p-6"
+              className="interactive-card rounded-2xl border border-dashed border-brand-green/45 bg-zinc-900/80 p-4 md:p-6"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-brand-green/10 text-brand-interactive">
-                <Icon aria-hidden="true" size={23} />
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-green/10 text-brand-interactive md:h-12 md:w-12">
+                <Icon aria-hidden="true" className="h-5 w-5 md:h-[23px] md:w-[23px]" />
               </span>
-              <h3 className="mt-6 font-heading text-3xl font-black uppercase leading-none text-zinc-400 italic">
+              <h3 className="mt-4 font-heading text-xl font-black uppercase leading-none text-zinc-400 italic md:mt-6 md:text-3xl">
                 {title}
               </h3>
             </article>

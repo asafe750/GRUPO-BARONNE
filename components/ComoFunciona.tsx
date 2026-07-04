@@ -58,7 +58,7 @@ export function ComoFunciona() {
         <SectionLabel visible={inView}>Como Funciona</SectionLabel>
         <h2
           id="como-funciona-title"
-          className="mt-4 max-w-4xl font-heading text-5xl font-black uppercase leading-none text-white md:text-6xl"
+          className="mt-4 max-w-4xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
         >
           Do pedido à entrega, sem complicação.
         </h2>

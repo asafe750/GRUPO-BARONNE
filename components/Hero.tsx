@@ -53,13 +53,13 @@ export function Hero() {
       >
         <motion.p
           variants={item}
-          className="mb-5 font-heading text-sm font-extrabold uppercase tracking-[0.15em] text-brand-accent"
+          className="mb-5 max-w-[18rem] font-heading text-xs font-extrabold uppercase tracking-[0.15em] text-brand-accent sm:max-w-none sm:text-sm"
         >
           Transporte nacional e Paletes PBR
         </motion.p>
         <motion.h1
           variants={item}
-          className="max-w-4xl font-heading text-[48px] font-black uppercase leading-[0.88] tracking-normal text-white sm:text-[58px] lg:text-[80px]"
+          className="max-w-4xl font-heading text-[42px] font-black uppercase leading-[0.88] tracking-normal text-white sm:text-[58px] lg:text-[80px]"
         >
           A força que move o Brasil.
         </motion.h1>

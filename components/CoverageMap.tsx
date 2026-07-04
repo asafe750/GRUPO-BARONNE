@@ -59,7 +59,7 @@ export function TransportSection() {
           <SectionLabel visible={inView}>Transporte de Cargas</SectionLabel>
           <h2
             id="transporte-title"
-            className="mt-4 max-w-3xl font-heading text-5xl font-black uppercase leading-none text-white md:text-6xl"
+            className="mt-4 max-w-3xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
           >
             Do Nordeste ao Sul do Brasil, sua carga chega.
           </h2>
@@ -139,16 +139,13 @@ export function PalletsSection() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.68),rgba(0,0,0,0.42))]" />
-          <span className="placeholder-dash absolute bottom-5 left-5 rounded-full px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] backdrop-blur">
-            [ FOTO DO ESTOQUE A ADICIONAR ]
-          </span>
         </div>
 
         <div className="order-1 lg:order-2">
           <SectionLabel visible={inView}>Paletes PBR Certificados</SectionLabel>
           <h2
             id="paletes-title"
-            className="mt-4 max-w-3xl font-heading text-5xl font-black uppercase leading-none text-white md:text-6xl"
+            className="mt-4 max-w-3xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
           >
             Estoque próprio. Entrega garantida.
           </h2>
