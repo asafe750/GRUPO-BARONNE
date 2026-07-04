@@ -75,14 +75,14 @@ export function Hero() {
             href={WHATSAPP.general}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-interactive focus:outline-none focus:ring-4 focus:ring-brand-interactive/25"
+            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-7 text-sm font-extrabold text-black transition hover:bg-brand-interactive focus:outline-none focus:ring-4 focus:ring-brand-interactive/25 sm:w-auto"
           >
             <WhatsAppIcon className="h-5 w-5 shrink-0" />
             Fale pelo WhatsApp
           </a>
           <a
             href="#paletes"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/25 px-7 text-sm font-extrabold text-white transition hover:border-brand-interactive hover:text-brand-interactive"
+            className="inline-flex h-12 w-full items-center justify-center rounded-full border border-white/25 px-7 text-sm font-extrabold text-white transition hover:border-brand-interactive hover:text-brand-interactive sm:w-auto"
           >
             Conheça nossos serviços
           </a>

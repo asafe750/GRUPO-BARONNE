@@ -91,7 +91,7 @@ export function TransportSection() {
             href={WHATSAPP.transport}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive"
+            className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive sm:w-auto"
           >
             <WhatsAppIcon className="h-5 w-5 shrink-0" />
             Solicitar frete pelo WhatsApp
@@ -130,7 +130,7 @@ export function PalletsSection() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_88%_12%,rgba(34,197,94,0.1),transparent_24rem)]" />
 
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div className="interactive-card relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem]">
+        <div className="interactive-card order-2 relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem] lg:order-1">
           <Image
             src={palletsImage}
             alt="Estoque de paletes PBR certificados em Camaçari BA"
@@ -144,7 +144,7 @@ export function PalletsSection() {
           </span>
         </div>
 
-        <div>
+        <div className="order-1 lg:order-2">
           <SectionLabel visible={inView}>Paletes PBR Certificados</SectionLabel>
           <h2
             id="paletes-title"
@@ -170,7 +170,7 @@ export function PalletsSection() {
             href={WHATSAPP.pallets}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive"
+            className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive sm:w-auto"
           >
             <WhatsAppIcon className="h-5 w-5 shrink-0" />
             Pedir paletes pelo WhatsApp
