@@ -7,28 +7,29 @@ import { SectionLabel } from "@/components/SectionLabel";
 
 const freightImages = [
   {
-    src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=85",
-    alt: "Transporte de carga do Grupo Baronne com caminhão em operação no Brasil"
+    src: "/images/prova-social-1.jpg",
+    alt: "Prova social de frete realizado pelo Grupo Baronne",
+    route: "Lugar X Lugar"
   },
   {
-    src: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000&q=85",
-    alt: "Caminhão de frete do Grupo Baronne rodando em estrada brasileira"
+    src: "/images/prova-social-2.jpg",
+    alt: "Registro de entrega de carga realizada pelo Grupo Baronne",
+    route: "Lugar X Lugar"
   },
   {
-    src: "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1000&q=85",
-    alt: "Operação de carga e logística do Grupo Baronne em armazém"
+    src: "/images/prova-social-3.jpg",
+    alt: "Prova social de transporte concluído pelo Grupo Baronne",
+    route: "Lugar X Lugar"
   },
   {
-    src: "https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=1000&q=85",
-    alt: "Frete rodoviário do Grupo Baronne em rota nacional"
+    src: "/images/prova-social-4.jpg",
+    alt: "Frete concluído com caminhão do Grupo Baronne",
+    route: "Lugar X Lugar"
   },
   {
-    src: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1000&q=85",
-    alt: "Entrega de carga do Grupo Baronne com operação logística"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=85",
-    alt: "Caminhão de carga do Grupo Baronne em rodovia durante frete"
+    src: "/images/prova-social-5.jpg",
+    alt: "Entrega bem sucedida realizada pelo Grupo Baronne",
+    route: "Lugar X Lugar"
   }
 ];
 
@@ -75,7 +76,26 @@ export function FretesConcluidos() {
                 sizes="(min-width: 768px) 30rem, 78vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.18),rgba(0,0,0,0.72))]" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.76))]" />
+              <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-4">
+                <div>
+                  <p className="font-heading text-2xl font-black uppercase leading-none text-white">
+                    {image.route}
+                  </p>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-brand-accent">
+                    Frete concluído
+                  </p>
+                </div>
+                <div className="relative h-12 w-20 shrink-0 overflow-hidden rounded-lg bg-black/45 backdrop-blur">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Logo Grupo Baronne"
+                    fill
+                    sizes="80px"
+                    className="object-contain p-1"
+                  />
+                </div>
+              </div>
             </article>
           ))}
         </div>

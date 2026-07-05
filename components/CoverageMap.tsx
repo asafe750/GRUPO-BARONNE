@@ -9,8 +9,7 @@ import { WHATSAPP } from "@/lib/constants";
 
 const truckImage = "/images/transporte-cargas.png";
 
-const palletsImage =
-  "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=85";
+const palletsImage = "/images/paletes-pbr.png";
 
 function ShieldIcon() {
   return (
