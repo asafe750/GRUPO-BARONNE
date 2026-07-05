@@ -9,27 +9,27 @@ const freightImages = [
   {
     src: "/images/prova-social-1.jpg",
     alt: "Prova social de frete realizado pelo Grupo Baronne",
-    route: "Lugar X Lugar"
+    route: "Camaçari BA para São Paulo SP"
   },
   {
     src: "/images/prova-social-2.jpg",
     alt: "Registro de entrega de carga realizada pelo Grupo Baronne",
-    route: "Lugar X Lugar"
+    route: "Salvador BA para Recife PE"
   },
   {
     src: "/images/prova-social-3.jpg",
     alt: "Prova social de transporte concluído pelo Grupo Baronne",
-    route: "Lugar X Lugar"
+    route: "Feira de Santana BA para Brasília DF"
   },
   {
     src: "/images/prova-social-4.jpg",
     alt: "Frete concluído com caminhão do Grupo Baronne",
-    route: "Lugar X Lugar"
+    route: "Camaçari BA para Rio de Janeiro RJ"
   },
   {
     src: "/images/prova-social-5.jpg",
     alt: "Entrega bem sucedida realizada pelo Grupo Baronne",
-    route: "Lugar X Lugar"
+    route: "Salvador BA para Fortaleza CE"
   }
 ];
 
