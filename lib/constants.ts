@@ -45,7 +45,7 @@ export const NAV_LINKS = [
   { label: "Contato", href: "#contato" }
 ] as const;
 
-export const HERO_IMAGE = "/images/hero-caminhoes.jpg";
+export const HERO_IMAGE = "/images/hero-principal.png";
 
 export const ABOUT_IMAGE =
   "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1800&q=85";
