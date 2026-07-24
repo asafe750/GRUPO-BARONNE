@@ -1,15 +1,27 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { Boxes, Container, PackageCheck, Warehouse } from "lucide-react";
+import { Boxes, FlaskConical, Truck } from "lucide-react";
 import { useRef } from "react";
 import { SectionLabel } from "@/components/SectionLabel";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 const cargoTypes = [
-  { icon: Boxes, title: "[ TIPO DE CARGA A PREENCHER ]" },
-  { icon: PackageCheck, title: "[ TIPO DE CARGA A PREENCHER ]" },
-  { icon: Warehouse, title: "[ TIPO DE CARGA A PREENCHER ]" },
-  { icon: Container, title: "[ TIPO DE CARGA A PREENCHER ]" }
+  {
+    icon: Truck,
+    title: "Lotação",
+    description: "Carga completa e exclusiva, o caminhão sai dedicado apenas à sua operação."
+  },
+  {
+    icon: Boxes,
+    title: "Fracionado",
+    description: "Volumes menores compartilhando rota, com custo proporcional ao que você envia."
+  },
+  {
+    icon: FlaskConical,
+    title: "Químico",
+    description: "Transporte de cargas químicas com os cuidados e o manuseio que o material exige."
+  }
 ];
 
 export function TiposDeCarga() {
@@ -40,24 +52,43 @@ export function TiposDeCarga() {
           Atendemos diferentes perfis de operação logística.
         </p>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 md:mt-12 xl:grid-cols-4">
-          {cargoTypes.map(({ icon: Icon, title }, index) => (
+        <div className="mt-8 grid grid-cols-1 gap-5 md:mt-12 md:grid-cols-2 lg:grid-cols-3">
+          {cargoTypes.map(({ icon: Icon, title, description }) => (
             <article
-              key={`${title}-${index}`}
-              className="interactive-card rounded-2xl border border-dashed border-brand-green/45 bg-zinc-900/80 p-4 md:p-6"
+              key={title}
+              className="interactive-card rounded-2xl border border-zinc-800 bg-zinc-900 p-4 md:p-6"
             >
               <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-green/10 text-brand-interactive md:h-12 md:w-12">
                 <Icon aria-hidden="true" className="h-5 w-5 md:h-[23px] md:w-[23px]" />
               </span>
-              <h3 className="mt-4 font-heading text-xl font-black uppercase leading-none text-zinc-400 italic md:mt-6 md:text-3xl">
+              <h3 className="mt-4 font-heading text-2xl font-black uppercase leading-none text-white md:mt-6 md:text-3xl">
                 {title}
               </h3>
+              <p className="mt-4 text-sm leading-7 text-zinc-300 md:text-base">
+                {description}
+              </p>
             </article>
           ))}
         </div>
 
-        <div className="placeholder-dash mt-8 inline-flex rounded-2xl px-5 py-3 font-mono text-sm italic">
-          {"/* [ Confirmar tipos de carga aceitos com o cliente ] */"}
+        <div className="mt-8 rounded-2xl border border-zinc-800 border-l-brand-green bg-zinc-900 p-5 text-base leading-8 text-white md:p-6 md:text-lg">
+          Não encontrou seu tipo de carga?{" "}
+          <strong className="font-extrabold text-brand-accent">
+            Transportamos todo tipo de carga.
+          </strong>{" "}
+          Fale com a gente e monte sua cotação.
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <a
+            href="https://wa.me/5571999990385?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o."
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive focus:outline-none focus:ring-4 focus:ring-brand-interactive/25 sm:w-auto"
+          >
+            <WhatsAppIcon className="h-5 w-5 shrink-0" />
+            Faça Sua Cotação!
+          </a>
         </div>
       </div>
     </motion.section>
