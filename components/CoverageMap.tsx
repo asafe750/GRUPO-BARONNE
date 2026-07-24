@@ -48,34 +48,34 @@ export function TransportSection() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow relative isolate overflow-hidden bg-black px-5 py-12 md:px-8 md:py-24"
+      className="section-flow relative isolate overflow-hidden bg-black px-4 py-10 md:px-8 md:py-24"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(34,197,94,0.1),transparent_24rem)]" />
       <div className="pointer-events-none absolute -top-52 left-1/2 z-0 h-[28rem] w-[150vw] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_top,rgba(74,222,0,0.18),rgba(34,197,94,0.11)_44%,transparent_76%)] blur-2xl" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-7 md:gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">
         <div>
           <SectionLabel visible={inView}>Transporte de Cargas</SectionLabel>
           <h2
             id="transporte-title"
-            className="mt-4 max-w-3xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
+            className="mt-4 max-w-3xl font-heading text-[36px] font-black uppercase leading-none text-white sm:text-[42px] md:text-6xl"
           >
             Do Nordeste ao Sul do Brasil, sua carga chega.
           </h2>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
+          <p className="mt-5 max-w-2xl text-[15px] leading-7 text-zinc-300 md:mt-6 md:text-lg md:leading-8">
             Com base operacional em Camaçari BA, o Grupo Baronne realiza transporte de cargas em todo
             o território nacional. Atendemos empresas em São Paulo, Rio de Janeiro, Brasília, Belo
             Horizonte, Fortaleza, Recife, Salvador, Feira de Santana, Manaus, Curitiba, Porto Alegre,
             Goiânia e demais regiões.
           </p>
 
-          <div className="interactive-card mt-8 rounded-2xl border border-green-500 bg-zinc-900 p-6 shadow-[0_22px_70px_rgba(126,211,33,0.2)]">
-            <div className="flex items-start gap-4">
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-green/10">
+          <div className="interactive-card mt-6 rounded-2xl border border-green-500 bg-zinc-900 p-4 shadow-[0_22px_70px_rgba(126,211,33,0.2)] md:mt-8 md:p-6">
+            <div className="flex items-start gap-3 md:gap-4">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-green/10 md:h-12 md:w-12">
                 <ShieldIcon />
               </span>
               <div>
-                <h3 className="font-heading text-2xl font-black uppercase leading-none text-white">
+                <h3 className="font-heading text-xl font-black uppercase leading-none text-white md:text-2xl">
                   Garantia Minha Carga Segura
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-zinc-300">
@@ -90,19 +90,21 @@ export function TransportSection() {
             href={WHATSAPP.transport}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive sm:w-auto"
+            className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive sm:w-auto md:mt-8"
           >
             <WhatsAppIcon className="h-5 w-5 shrink-0" />
             Solicitar frete pelo WhatsApp
           </a>
         </div>
 
-        <div className="interactive-card relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem]">
+        <div className="interactive-card relative min-h-[16rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem]">
           <Image
             src={truckImage}
             alt="Caminhão em rodovia para transporte de cargas do Grupo Baronne"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
+            quality={75}
+            loading="lazy"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.68),rgba(0,0,0,0.38))]" />
@@ -124,17 +126,19 @@ export function PalletsSection() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow relative isolate overflow-hidden bg-black px-5 py-12 md:px-8 md:py-24"
+      className="section-flow relative isolate overflow-hidden bg-black px-4 py-10 md:px-8 md:py-24"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_88%_12%,rgba(34,197,94,0.1),transparent_24rem)]" />
 
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
-        <div className="interactive-card order-2 relative min-h-[22rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem] lg:order-1">
+      <div className="mx-auto grid max-w-7xl gap-7 md:gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
+        <div className="interactive-card order-2 relative min-h-[16rem] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-2xl md:min-h-[31rem] lg:order-1">
           <Image
             src={palletsImage}
             alt="Estoque de paletes PBR certificados em Camaçari BA"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
+            quality={75}
+            loading="lazy"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.68),rgba(0,0,0,0.42))]" />
@@ -144,15 +148,15 @@ export function PalletsSection() {
           <SectionLabel visible={inView}>Paletes PBR Certificados</SectionLabel>
           <h2
             id="paletes-title"
-            className="mt-4 max-w-3xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
+            className="mt-4 max-w-3xl font-heading text-[36px] font-black uppercase leading-none text-white sm:text-[42px] md:text-6xl"
           >
             Estoque próprio. Entrega garantida.
           </h2>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
+          <p className="mt-5 max-w-2xl text-[15px] leading-7 text-zinc-300 md:mt-6 md:text-lg md:leading-8">
             Nosso estoque de paletes PBR certificados está em Camaçari BA. Quantidade que você
             precisar, entregamos.
           </p>
-          <div className="mt-7 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-2 md:mt-7 md:gap-3">
             {cityPills.map((city) => (
               <span
                 key={city}
@@ -166,7 +170,7 @@ export function PalletsSection() {
             href={WHATSAPP.pallets}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive sm:w-auto"
+            className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-green px-6 text-sm font-extrabold text-black transition hover:bg-brand-interactive sm:w-auto md:mt-8"
           >
             <WhatsAppIcon className="h-5 w-5 shrink-0" />
             Pedir paletes pelo WhatsApp

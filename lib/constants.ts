@@ -48,13 +48,13 @@ export const NAV_LINKS = [
 export const HERO_IMAGE = "/images/hero-principal.png";
 
 export const ABOUT_IMAGE =
-  "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1800&q=85";
+  "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1200&q=75";
 
 export const TRANSPORT_IMAGE =
-  "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1800&q=85";
+  "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=75";
 
 export const PALLET_IMAGE =
-  "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=85";
+  "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=75";
 
 export const BRAND_COLORS = {
   primary: "#22c55e",

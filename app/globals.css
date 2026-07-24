@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 76px;
   background: var(--brand-black);
 }
 
@@ -47,8 +48,15 @@ textarea {
   font: inherit;
 }
 
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
 section {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 76px;
 }
 
 .section-flow {
@@ -182,5 +190,15 @@ button[class*="rounded-full"]:hover {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 96px;
+  }
+
+  section {
+    scroll-margin-top: 96px;
   }
 }

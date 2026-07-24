@@ -37,7 +37,7 @@ export function Navbar() {
       >
         <nav
           aria-label="Navegação principal"
-          className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8"
+          className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8"
         >
           <a href="#inicio" onClick={closeMenu} className="group inline-flex items-center">
             <Image
@@ -45,8 +45,7 @@ export function Navbar() {
               alt="Logo Grupo Baronne Transporte e Paletes"
               width={207}
               height={133}
-              className="h-[4rem] w-auto object-contain md:h-[4.6rem]"
-              priority
+              className="h-[3.25rem] w-auto object-contain md:h-[4.6rem]"
             />
           </a>
 
@@ -79,7 +78,7 @@ export function Navbar() {
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((value) => !value)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-green/35 bg-zinc-950/90 text-brand-accent shadow-[0_0_24px_rgba(126,211,33,0.16)] xl:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-green/35 bg-zinc-950/90 text-brand-accent shadow-[0_0_24px_rgba(126,211,33,0.16)] md:h-12 md:w-12 xl:hidden"
           >
             {isOpen ? <X aria-hidden="true" size={22} /> : <Menu aria-hidden="true" size={22} />}
           </button>
@@ -92,7 +91,7 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.22 }}
-              className="border-t border-zinc-800 bg-black/95 px-5 pb-6 pt-2 shadow-2xl backdrop-blur-xl xl:hidden"
+              className="max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-zinc-800 bg-black/95 px-4 pb-6 pt-2 shadow-2xl backdrop-blur-xl xl:hidden"
             >
               <div className="mx-auto flex max-w-7xl flex-col gap-1">
                 {NAV_LINKS.map((link) => (

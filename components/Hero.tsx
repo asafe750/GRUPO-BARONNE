@@ -31,13 +31,14 @@ export function Hero() {
     <section
       id="inicio"
       aria-label="Grupo Baronne transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR em Camaçari BA"
-      className="section-flow section-glow-bottom-right relative isolate flex min-h-screen items-center overflow-hidden bg-black px-5 py-20 md:px-8 md:py-28"
+      className="section-flow section-glow-bottom-right relative isolate flex min-h-[88svh] items-center overflow-hidden bg-black px-4 py-16 pt-24 md:min-h-screen md:px-8 md:py-28"
     >
       <Image
         src={HERO_IMAGE}
         alt="Caminhão em rodovia à noite representando transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul pelo Grupo Baronne"
         fill
         priority
+        quality={75}
         sizes="100vw"
         className="absolute inset-0 -z-20 object-cover"
       />
@@ -49,28 +50,28 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="relative z-10 mx-auto w-full max-w-7xl pt-12"
+        className="relative z-10 mx-auto w-full max-w-7xl pt-6 md:pt-12"
       >
         <motion.p
           variants={item}
-          className="mb-5 max-w-[18rem] font-heading text-xs font-extrabold uppercase tracking-[0.15em] text-brand-accent sm:max-w-none sm:text-sm"
+          className="mb-4 max-w-[18rem] font-heading text-xs font-extrabold uppercase tracking-[0.15em] text-brand-accent sm:max-w-none sm:text-sm md:mb-5"
         >
           Transporte nacional e Paletes PBR
         </motion.p>
         <motion.h1
           variants={item}
-          className="max-w-4xl font-heading text-[42px] font-black uppercase leading-[0.88] tracking-normal text-white sm:text-[58px] lg:text-[80px]"
+          className="max-w-4xl font-heading text-[38px] font-black uppercase leading-[0.9] tracking-normal text-white sm:text-[50px] md:text-[58px] lg:text-[80px]"
         >
           A força que move o Brasil.
         </motion.h1>
         <motion.p
           variants={item}
-          className="mt-7 max-w-2xl text-lg font-medium leading-8 text-zinc-300 md:text-xl"
+          className="mt-5 max-w-2xl text-base font-medium leading-7 text-zinc-300 md:mt-7 md:text-xl md:leading-8"
         >
           Transporte de cargas nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul e paletes PBR
           certificados com base em Camaçari BA.
         </motion.p>
-        <motion.div variants={item} className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
+        <motion.div variants={item} className="mt-7 flex flex-col gap-3 sm:flex-row md:mt-10 md:gap-4">
           <a
             href={WHATSAPP.general}
             target="_blank"

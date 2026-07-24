@@ -36,7 +36,7 @@ export function TiposDeCarga() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow relative isolate overflow-hidden bg-black px-5 py-12 md:px-8 md:py-24"
+      className="section-flow relative isolate overflow-hidden bg-black px-4 py-10 md:px-8 md:py-24"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_80%_20%,rgba(126,211,33,0.08),transparent_24rem)]" />
 
@@ -44,15 +44,15 @@ export function TiposDeCarga() {
         <SectionLabel visible={inView}>Tipos de Carga</SectionLabel>
         <h2
           id="tipos-de-carga-title"
-          className="mt-4 max-w-4xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
+          className="mt-4 max-w-4xl font-heading text-[36px] font-black uppercase leading-none text-white sm:text-[42px] md:text-6xl"
         >
           Carga certa, no transporte certo.
         </h2>
-        <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300 md:text-lg">
+        <p className="mt-5 max-w-2xl text-[15px] leading-7 text-zinc-300 md:mt-6 md:text-lg md:leading-8">
           Atendemos diferentes perfis de operação logística.
         </p>
 
-        <div className="mt-8 grid grid-cols-1 gap-5 md:mt-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-7 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
           {cargoTypes.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
@@ -71,7 +71,7 @@ export function TiposDeCarga() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-zinc-800 border-l-brand-green bg-zinc-900 p-5 text-base leading-8 text-white md:p-6 md:text-lg">
+        <div className="mt-7 rounded-2xl border border-zinc-800 border-l-brand-green bg-zinc-900 p-4 text-[15px] leading-7 text-white md:mt-8 md:p-6 md:text-lg md:leading-8">
           Não encontrou seu tipo de carga?{" "}
           <strong className="font-extrabold text-brand-accent">
             Transportamos todo tipo de carga.

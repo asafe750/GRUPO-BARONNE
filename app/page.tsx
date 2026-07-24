@@ -6,6 +6,7 @@ import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { FretesConcluidos } from "@/components/FretesConcluidos";
 import { Hero } from "@/components/Hero";
+import { LeadFormModal } from "@/components/LeadFormModal";
 import { Navbar } from "@/components/Navbar";
 import { TiposDeCarga } from "@/components/TiposDeCarga";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <CTASection />
       </main>
       <Footer />
+      <LeadFormModal />
     </>
   );
 }

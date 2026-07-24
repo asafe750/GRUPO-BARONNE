@@ -6,7 +6,7 @@ const services = ["Transporte de Cargas", "Paletes PBR Certificados"];
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-900 bg-black px-5 py-8 md:px-8 md:py-14">
+    <footer className="border-t border-zinc-900 bg-black px-4 py-8 md:px-8 md:py-14">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr] lg:gap-10">
         <div>
           <a href="#inicio" className="inline-flex items-center">
@@ -15,7 +15,8 @@ export function Footer() {
               alt="Logo Grupo Baronne Transporte e Paletes"
               width={253}
               height={162}
-              className="h-[5.75rem] w-auto object-contain md:h-[6.9rem]"
+              loading="lazy"
+              className="h-20 w-auto object-contain md:h-[6.9rem]"
             />
           </a>
           <p className="mt-5 max-w-sm text-sm leading-7 text-zinc-400">

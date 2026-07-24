@@ -18,18 +18,18 @@ export function CTASection() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow section-glow-top-right bg-black px-5 py-12 md:px-8 md:py-24"
+      className="section-flow section-glow-top-right bg-black px-4 py-10 md:px-8 md:py-24"
     >
-      <div className="mx-auto overflow-hidden rounded-[2rem] border border-brand-green/25 bg-gradient-to-br from-[#0d371b] via-[#0f2415] to-black p-5 shadow-glow md:p-14">
+      <div className="mx-auto overflow-hidden rounded-[1.5rem] border border-brand-green/25 bg-gradient-to-br from-[#0d371b] via-[#0f2415] to-black p-5 shadow-glow md:rounded-[2rem] md:p-14">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <div>
             <h2
               id="contato-title"
-              className="font-heading text-[40px] font-black uppercase leading-none text-white md:text-7xl"
+              className="font-heading text-[36px] font-black uppercase leading-none text-white sm:text-[42px] md:text-7xl"
             >
               Pronto para mover sua carga?
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-200">
+            <p className="mt-4 max-w-2xl text-[15px] leading-7 text-zinc-200 md:mt-5 md:text-base md:leading-8">
               Fale com o Grupo Baronne e receba um atendimento direto para transporte de cargas ou
               fornecimento de paletes PBR certificados.
             </p>

@@ -59,7 +59,7 @@ export function FAQ() {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      className="section-flow section-glow-bottom-left bg-black px-5 py-12 md:px-8 md:py-24"
+      className="section-flow section-glow-bottom-left bg-black px-4 py-10 md:px-8 md:py-24"
     >
       <script
         type="application/ld+json"
@@ -70,12 +70,12 @@ export function FAQ() {
         <SectionLabel visible={inView}>Perguntas Frequentes</SectionLabel>
         <h2
           id="faq-title"
-          className="mt-4 max-w-4xl font-heading text-[40px] font-black uppercase leading-none text-white md:text-6xl"
+          className="mt-4 max-w-4xl font-heading text-[36px] font-black uppercase leading-none text-white sm:text-[42px] md:text-6xl"
         >
           Tire suas dúvidas.
         </h2>
 
-        <dl className="mt-8 space-y-4 md:mt-12">
+        <dl className="mt-7 space-y-3 md:mt-12 md:space-y-4">
           {faqs.map(({ question, answer, placeholder }, index) => {
             const isOpen = openIndex === index;
 
@@ -89,9 +89,9 @@ export function FAQ() {
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
+                    className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left md:gap-5 md:px-6 md:py-5"
                   >
-                    <span className="font-heading text-2xl font-black uppercase leading-none text-white">
+                    <span className="font-heading text-xl font-black uppercase leading-none text-white md:text-2xl">
                       {question}
                     </span>
                     <ChevronDown
@@ -111,7 +111,7 @@ export function FAQ() {
                       transition={{ duration: 0.24, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-5 md:px-6">
+                      <div className="px-4 pb-4 md:px-6 md:pb-5">
                         <p
                           className={
                             placeholder
